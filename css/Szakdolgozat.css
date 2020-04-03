@@ -5,12 +5,12 @@ html {
 body {
     background-color:rgba(199, 193, 193, 0.555);
     background-repeat: no-repeat;
-
+    /*megnezni micsodak*/
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
     min-height: 100%;
-    padding-bottom: 80px; /* same as footer's height */
+    padding-bottom: 5%;
 }
 
 .container-back {
@@ -26,35 +26,10 @@ body {
     width: 8%;
     position: absolute;
     right: 4%;
-    top: 2%;
+    top: 1.5%;
 }
 
-.bbte-logo {
-    width: 4%;
-    position: absolute;
-    right: 1%;
-    top: 3%;
-}
-
-@media (min-width: 800px) and (max-width: 1200px) {
-    .fsega-logo {
-        width: 8%;
-        position: absolute;
-        right: 4%;
-        top: 1.5%;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 800px) {
-    .fsega-logo {
-        width: 7%;
-        position: absolute;
-        right: 4%;
-        top: 1.5%;
-    }
-}
-
-@media (max-width: 500px) {
+@media (min-width: 800px) and (max-width: 1100px) {
     .fsega-logo {
         width: 7%;
         position: absolute;
@@ -63,62 +38,62 @@ body {
     }
 }
 
-/*@media (min-width: 800px) and (max-width: 1200px) {
-    .bbte-logo {
-        width: 4%;
+@media (min-width: 650px) and (max-width: 799px) {
+    .fsega-logo {
+        width: 7%;
         position: absolute;
-        right: 1%;
-        top: 2.5%;
+        right: 4%;
+        top: 1%;
     }
 }
 
-@media (min-width: 500px) and (max-width: 800px) {
-    .bbte-logo {
-        width: 3%;
+@media (min-width: 500px) and (max-width: 649px) {
+    .fsega-logo {
+        width: 7%;
         position: absolute;
-        right: 1%;
-        top: 2.5%;
+        right: 4%;
+        top: 0.8%;
     }
 }
 
-@media (max-width: 500px) {
-    .bbte-logo {
-        width: 3%;
+@media (max-width: 499px) {
+    .fsega-logo {
+        width: 7%;
         position: absolute;
-        right: 1%;
-        top: 2%;
+        right: 4%;
+        top: 0.6%;
     }
-}*/
+}
 
 .background-text {
     position: absolute;
-    top: 8%;
-    left: 30%;
+    top: 7%;
+    left: 31%;
     transform: translate(-50%, -50%);
 }
 
-@media (min-width: 1200px) {
-    
-    .title {
-        font-size: 250%;
-        font-family: Georgia;
-        color: rgb(119, 8, 8);
-        line-height: 100%;
-        font-weight: bold;
-        text-align: center;
-    }
-    .subtitle {
-        font-size: 140%;
-        font-family: "Georgia";
-        color: black;
-        font-style: italic;
-        font-weight: bold;
-        text-align: center;
-    }
+.title {
+    font-size: 240%;
+    font-family: Georgia;
+    color: rgb(119, 8, 8);
+    line-height: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+.subtitle {
+    font-size: 140%;
+    font-family: "Georgia";
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
 }
 
-@media (min-width: 1050px) and (max-width: 1200px) {
-   
+@media (min-width: 1200px) and (max-width: 1295px) {
+    
+    .background-text {
+        top: 6%;
+    }
     .title {
         font-size: 220%;
         font-family: Georgia;
@@ -137,7 +112,30 @@ body {
     }
 }
 
-@media (min-width: 500px) and (max-width: 1050px) {
+@media (min-width: 1050px) and (max-width: 1199px) {
+   
+    .background-text {
+        top: 5%;
+    }
+    .title {
+        font-size: 220%;
+        font-family: Georgia;
+        color: rgb(119, 8, 8);
+        line-height: 50%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 120%;
+        font-family: "Georgia";
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 1049px) {
 
     .background-text {
         position: relative;
@@ -481,9 +479,9 @@ td:nth-child(1) {
 @media (max-width: 875px){
 
     table#t01 {
-        width: 100%;
+        width: 70%;
         position: relative;
-        transform: translate(-40%,0%);
+        left: 20%;
         margin-top: 5%;
         margin-bottom: 5%;
     }
@@ -497,13 +495,10 @@ footer{
     width: 100%;
 }
 
-.footer-text {
+.footer-text p{
     font-family: Georgia;
     color: white;
     font-size: 80%;
-    margin: 0 0;
-}
-.footer-text p {
     margin: 0 0;
 }
 
@@ -512,11 +507,10 @@ footer{
     text-decoration: none;
 }
 
-.footer-links a, .footer-links i {
+.footer-icons a, .footer-icons i {
     display: inline-block;
     vertical-align: middle;
     float: none;
-    padding: 0 15;
 }
 
 .fa-facebook {
@@ -531,19 +525,12 @@ footer{
     color: white;
 }
 
-@media (max-width: 615px) {
+@media (max-width: 770px) {
 
-    .navbar-text {
-        font-size: 80%;
-        margin-top: 2%;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .footer-text {
+    .footer-text p{
         display: none;
     }
+
 }
 
 .small-title {
@@ -569,11 +556,11 @@ footer{
     margin-left: 10%;
 }
 
-.kapcsolat{
-    margin-top: 3%;
+.contact {
+    margin-top: 2%;
 }
 
-.egysoros-paragraf{
+.one-line-paragraf{
     font-size: 120%;
     color: rgb(51, 3, 3);
     font-family: Arial;
@@ -582,10 +569,8 @@ footer{
     margin-right: 3%;
 }
 
-.kerdes{
+.end{
     font-style: italic;
-    margin-top: 2%;
-    margin-bottom: 1.2%;
 }
 
 .link{
