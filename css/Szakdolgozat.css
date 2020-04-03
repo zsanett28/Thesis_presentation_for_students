@@ -1,0 +1,616 @@
+html {
+    height: 100%; 
+}
+
+body {
+    background-color:rgba(199, 193, 193, 0.555);
+    background-repeat: no-repeat;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 80px; /* same as footer's height */
+}
+
+.container-back {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.background {
+    width: 100%;
+}
+
+.fsega-logo {
+    width: 8%;
+    position: absolute;
+    right: 4%;
+    top: 2%;
+}
+
+.bbte-logo {
+    width: 4%;
+    position: absolute;
+    right: 1%;
+    top: 3%;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .fsega-logo {
+        width: 8%;
+        position: absolute;
+        right: 4%;
+        top: 1.5%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+    .fsega-logo {
+        width: 7%;
+        position: absolute;
+        right: 4%;
+        top: 1.5%;
+    }
+}
+
+@media (max-width: 500px) {
+    .fsega-logo {
+        width: 7%;
+        position: absolute;
+        right: 4%;
+        top: 1%;
+    }
+}
+
+/*@media (min-width: 800px) and (max-width: 1200px) {
+    .bbte-logo {
+        width: 4%;
+        position: absolute;
+        right: 1%;
+        top: 2.5%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+    .bbte-logo {
+        width: 3%;
+        position: absolute;
+        right: 1%;
+        top: 2.5%;
+    }
+}
+
+@media (max-width: 500px) {
+    .bbte-logo {
+        width: 3%;
+        position: absolute;
+        right: 1%;
+        top: 2%;
+    }
+}*/
+
+.background-text {
+    position: absolute;
+    top: 8%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 1200px) {
+    
+    .title {
+        font-size: 250%;
+        font-family: Georgia;
+        color: rgb(119, 8, 8);
+        line-height: 100%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 140%;
+        font-family: "Georgia";
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1050px) and (max-width: 1200px) {
+   
+    .title {
+        font-size: 220%;
+        font-family: Georgia;
+        color: rgb(119, 8, 8);
+        line-height: 50%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 120%;
+        font-family: "Georgia";
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1050px) {
+
+    .background-text {
+        position: relative;
+        transform: translate(-30%, 0%);
+    }
+    .title {
+        text-align: center;
+        font-size: 220%;
+        font-family: Georgia;
+        color: rgb(119, 8, 8);
+        line-height: 50%;
+        font-weight: bold;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 110%;
+        font-family: "Georgia";
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .background-text {
+        position: relative;
+        transform: translate(-30%, 0%);
+    }
+    .title {
+        text-align: center;
+        font-size: 220%;
+        font-family: Georgia;
+        color: rgb(119, 8, 8);
+        line-height: 100%;
+        font-weight: bold;
+    }
+    .subtitle {
+        text-align: center;
+        font-size: 110%;
+        font-family: "Georgia";
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+    }
+   
+}
+
+img#one {
+    border-radius: 8px;
+    width: 30%;
+    position: relative;
+    transform: translate(2%,55%);
+}
+
+img#two {
+    border-radius: 8px;
+    width: 38%;
+    position: relative;
+    transform: translate(-70%,195%);
+}
+
+img#three {
+    border-radius: 8px;
+    width: 28%;
+    position: relative;
+    transform: translate(-90%,25%);
+}
+
+img#four {
+    border-radius: 8px;
+    width: 35%;
+    position: relative;
+    transform: translate(95%,20%);
+}
+
+img#five {
+    border-radius: 8px;
+    width: 20%;
+    position: relative;
+    transform: translate(65%,195%);
+}
+
+img#six {
+    border-radius: 8px;
+    width: 30%;
+    position: relative;
+    transform: translate(45%,-30%);
+}
+
+img#seven {
+    border-radius: 8px;
+    width: 26%;
+    position: relative;
+    transform: translate(280%,10%);
+}
+
+@media (min-width:1257px) and (max-width: 1280px){
+    .pictures{
+        margin-top: 5%;
+    }
+}
+
+@media (min-width:1200px) and (max-width: 1256px){
+    .pictures{
+        margin-top: 7%;
+    }
+}
+
+@media (min-width:1051px) and (max-width: 1199px){
+    .pictures{
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1050px) {
+
+    .pictures{
+        margin-top: 0%;
+    }
+    img#one {
+        border-radius: 8px;
+        width: 38%;
+        position: relative;
+        transform: translate(8%,70%);
+    }
+
+    img#two {
+        border-radius: 8px;
+        width: 48%;
+        position: relative;
+        transform: translate(20%,100%);
+    }
+
+    img#three {
+        border-radius: 8px;
+        width: 30%;
+        position: relative;
+        transform: translate(20%,140%);
+    }
+
+    img#four {
+        border-radius: 8px;
+        width: 40%;
+        position: relative;
+        transform: translate(50%,150%);
+    }
+
+    img#five {
+        border-radius: 8px;
+        width: 38%;
+        position: relative;
+        transform: translate(15%,180%);
+    }
+
+    img#six {
+        border-radius: 8px;
+        width: 35%;
+        position: relative;
+        transform: translate(-80%,90%);
+    }
+
+    img#seven {
+        border-radius: 8px;
+        width: 38%;
+        position: relative;
+        transform: translate(150%,80%);
+    }
+
+}
+
+@media (max-width: 991px){
+    .pictures{
+        width: 90%;
+        margin-bottom: 15%;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
+
+.first {
+    font-family: Arial;
+    color: rgb(51, 3, 3);
+    font-size: 130%;
+    line-height: 400%;
+    text-indent: 0px;
+    font-style: italic;
+}
+
+.letter {
+    font-family: Arial;
+    color: rgb(51, 3, 3);
+    text-indent: 7%;
+    text-align: justify;
+    font-size: 110%;
+    line-height: 180%;
+}
+
+.ultimate {
+    font-family: Arial;
+    color: rgb(51, 3, 3);
+    text-align: right;
+    font-size: 100%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    line-height: 100%;
+    font-style: italic;
+}
+
+.menu {
+    width: 100%;
+}
+
+.navigacio {
+    width: 300px;
+    height: 100%;
+    background-color: rgb(88, 4, 4);
+    position: fixed;
+    top: 0;
+    left: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 70% 70% 0;
+    transition: left 0.8s;
+}
+
+.change {
+    left: 0;
+}
+
+.hamburger {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sor {
+    width: 90%;
+    height: 5px;
+    background-color:rgb(51, 3, 3);
+    transition: all 0.8s;
+    border-radius: 30% 30% 30% 30%;
+}
+
+.change .sor-1 {
+    transform: rotateZ(-45deg) translate(-8.5px, 8.5px);
+}
+
+.change .sor-2 {
+    opacity: 0;
+}
+
+.change .sor-3 {
+    transform: rotateZ(45deg) translate(-8.5px, -8.5px);
+}
+
+.list-item1 {
+    text-decoration: none;
+    color: white;
+}
+
+.menulink {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: "Georgia";
+    letter-spacing: 1px;
+    line-height: 3;
+    position: relative;
+    font-weight: 50;
+}
+
+.menulink::before,.menulink::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.menulink::before {
+    top: 0;
+}
+
+.menulink::after {
+    bottom: 0;
+}
+
+.menulink:hover::before, .menulink:hover::after {
+    transform: scaleX(1);
+}
+
+.menulink:hover {
+    text-decoration: none;
+    color: white;
+}
+
+table#t01 {
+    width: 60%;
+    position: relative;
+    left: 40%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+td {
+    font-size: 120%;
+    color: rgb(51, 3, 3);
+    font-family: Arial;
+    padding: 5px;
+    text-align: left;
+}
+
+td:nth-child(1) {
+    color: rgb(88, 4, 4);
+    font-weight: bold;
+}
+
+@media (max-width: 1102px){
+
+    td {
+        font-size: 100%;
+        color: rgb(51, 3, 3);
+        font-family: Arial;
+        padding: 7px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 875px){
+
+    table#t01 {
+        width: 100%;
+        position: relative;
+        transform: translate(-40%,0%);
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+/*.navbar {
+    background-color: rgb(51, 3, 3);
+    position: relative;
+}
+
+.navbar-text {
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    align-items: center;
+}*/
+
+footer{
+    background-color: rgb(51, 3, 3);   
+    padding: 0.5%;
+    position: absolute;
+    bottom: 0; /* you already have this */
+    width: 100%;
+  /*  position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6%;*/
+}
+
+.footer-text {
+    font-family: Georgia;
+    color: white;
+    font-size: 80%;
+    margin: 0 0;
+}
+.footer-text p {
+    margin: 0 0;
+}
+
+.footer-text a, .footer-text a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a, .footer-links i {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    padding: 0 15;
+}
+
+/*.footer-text a:hover {
+    text-decoration: none;
+    color: white;
+}*/
+
+.fa-facebook {
+    color: rgb(49, 102, 216);
+}
+
+.fa-instagram {
+    color: rgb(165, 11, 70);
+}
+
+.fa-graduation-cap {
+    color: white;
+}
+
+@media (max-width: 615px) {
+
+    .navbar-text {
+        font-size: 80%;
+        margin-top: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .footer-text {
+        display: none;
+    }
+}
+
+.small-title {
+    font-size: 180%;
+    color: rgb(88, 4, 4);
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.paragraf {
+    font-size: 120%;
+    color: rgb(51, 3, 3);
+    font-family: Arial;
+    text-indent: 3%;
+    text-align: justify;
+    
+}
+
+.list-item2 {
+    text-decoration: none;
+    list-style-type: circle;
+    color: rgb(51, 3, 3);
+    margin-left: 10%;
+}
+
+.kapcsolat{
+    margin-top: 3%;
+}
+
+.egysoros-paragraf{
+    font-size: 120%;
+    color: rgb(51, 3, 3);
+    font-family: Arial;
+    text-align: justify;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.kerdes{
+    font-style: italic;
+    margin-top: 2%;
+    margin-bottom: 1.2%;
+}
+
+.link{
+    text-decoration: underline;
+    color: rgb(119, 8, 8);
+}
+
