@@ -507,10 +507,8 @@ footer{
     text-decoration: none;
 }
 
-.footer-icons a, .footer-icons i {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+.footer-icons {
+    text-align: right;
 }
 
 .fa-facebook {
@@ -525,10 +523,14 @@ footer{
     color: white;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 767px) {
 
     .footer-text p{
         display: none;
+    }
+    .footer-icons {
+        position: relative;
+        text-align: center;
     }
 
 }
