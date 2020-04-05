@@ -627,6 +627,11 @@ form {
     margin-bottom: 3%;
 }
 
+.form-control{
+    font-size: 17px;
+    color: black;
+}
+
 .option-paragraf{
     color: rgb(119, 8, 8);
     font-size: 160%;
