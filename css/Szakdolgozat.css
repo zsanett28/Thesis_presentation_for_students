@@ -5,7 +5,6 @@ html {
 body {
     background-color:rgba(199, 193, 193, 0.555);
     background-repeat: no-repeat;
-    /*megnezni micsodak*/
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
@@ -22,80 +21,129 @@ body {
     width: 100%;
 }
 
-.fsega-logo {
-    width: 8%;
-    position: absolute;
-    right: 4%;
-    top: 1.5%;
-}
-
-@media (min-width: 800px) and (max-width: 1100px) {
-    .fsega-logo {
-        width: 7%;
+@media (min-width: 1295px) {
+    .bbte-logo{
+        width: 5%;
         position: absolute;
-        right: 4%;
+        right: 2%;
+        top: 1%;
+    }
+    .fsega-logo {
+        width: 5%;
+        position: absolute;
+        right: 8%;
         top: 1%;
     }
 }
 
-@media (min-width: 650px) and (max-width: 799px) {
-    .fsega-logo {
-        width: 7%;
+@media (min-width: 1200px) and (max-width: 1295px){
+    .bbte-logo{
+        width: 5%;
         position: absolute;
-        right: 4%;
+        right: 2%;
+        top: 1%;
+    }
+    .fsega-logo {
+        width: 5%;
+        position: absolute;
+        right: 8%;
         top: 1%;
     }
 }
 
-@media (min-width: 500px) and (max-width: 649px) {
-    .fsega-logo {
-        width: 7%;
+@media (min-width: 1101px) and (max-width: 1200px){
+    .bbte-logo{
+        width: 5%;
         position: absolute;
-        right: 4%;
-        top: 0.8%;
+        right: 2%;
+        top: 1%;
+    }
+    .fsega-logo {
+        width: 5%;
+        position: absolute;
+        right: 8%;
+        top: 1%;
     }
 }
 
-@media (max-width: 499px) {
-    .fsega-logo {
-        width: 7%;
+@media (min-width: 751px) and (max-width: 1100px){
+    .bbte-logo{
+        width: 5%;
         position: absolute;
-        right: 4%;
-        top: 0.6%;
+        right: 2%;
+        top: 1%;
+    }
+    .fsega-logo {
+        width: 5%;
+        position: absolute;
+        right: 8%;
+        top: 1%;
     }
 }
 
-.background-text {
-    position: absolute;
-    top: 7%;
-    left: 31%;
-    transform: translate(-50%, -50%);
+@media (min-width: 551px) and (max-width: 750px){
+    .bbte-logo{
+        width: 5%;
+        position: absolute;
+        right: 2%;
+        top: 0.7%;
+    }
+    .fsega-logo {
+        width: 5%;
+        position: absolute;
+        right: 8%;
+        top: 0.7%;
+    }
 }
 
-.title {
-    font-size: 240%;
-    font-family: Georgia;
-    color: rgb(119, 8, 8);
-    line-height: 100%;
-    font-weight: bold;
-    text-align: center;
+@media (max-width: 550px){
+    .bbte-logo{
+        width: 5%;
+        position: absolute;
+        right: 2%;
+        top: 0.4%;
+    }
+    .fsega-logo {
+        width: 5%;
+        position: absolute;
+        right: 8%;
+        top: 0.4%;
+    }
 }
-.subtitle {
-    font-size: 140%;
-    font-family: "Georgia";
-    color: black;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center;
+
+@media (min-width: 1295px){
+    .background-text {
+        position: absolute;
+        top: 2%;
+        left: 16%;
+    }
+    .title {
+        font-size: 240%;
+        font-family: Georgia;
+        color: rgb(119, 8, 8);
+        line-height: 80%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 140%;
+        font-family: "Georgia";
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+    }
 }
 
 @media (min-width: 1200px) and (max-width: 1295px) {
     
     .background-text {
-        top: 6%;
+        position: absolute;
+        top: 2%;
+        left: 15%;
     }
     .title {
-        font-size: 220%;
+        font-size: 210%;
         font-family: Georgia;
         color: rgb(119, 8, 8);
         line-height: 50%;
@@ -103,67 +151,45 @@ body {
         text-align: center;
     }
     .subtitle {
-        font-size: 120%;
-        font-family: "Georgia";
-        color: black;
-        font-style: italic;
-        font-weight: bold;
-        text-align: center;
-    }
-}
-
-@media (min-width: 1050px) and (max-width: 1199px) {
-   
-    .background-text {
-        top: 5%;
-    }
-    .title {
-        font-size: 220%;
-        font-family: Georgia;
-        color: rgb(119, 8, 8);
-        line-height: 50%;
-        font-weight: bold;
-        text-align: center;
-    }
-    .subtitle {
-        font-size: 120%;
-        font-family: "Georgia";
-        color: black;
-        font-style: italic;
-        font-weight: bold;
-        text-align: center;
-    }
-}
-
-@media (min-width: 501px) and (max-width: 1049px) {
-
-    .background-text {
-        position: relative;
-        transform: translate(-30%, 0%);
-    }
-    .title {
-        text-align: center;
-        font-size: 220%;
-        font-family: Georgia;
-        color: rgb(119, 8, 8);
-        line-height: 50%;
-        font-weight: bold;
-    }
-    .subtitle {
-        text-align: center;
         font-size: 110%;
         font-family: "Georgia";
         color: black;
         font-style: italic;
         font-weight: bold;
+        text-align: center;
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 1101px) and (max-width: 1200px) {
+   
+    .background-text {
+        position: absolute;
+        top: 2%;
+        left: 14%;
+    }
+    .title {
+        font-size: 200%;
+        font-family: Georgia;
+        color: rgb(119, 8, 8);
+        line-height: 50%;
+        font-weight: bold;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 100%;
+        font-family: "Georgia";
+        color: black;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1100px) {
 
     .background-text {
         position: relative;
-        transform: translate(-30%, 0%);
+        margin: auto;
     }
     .title {
         text-align: center;
@@ -181,7 +207,6 @@ body {
         font-style: italic;
         font-weight: bold;
     }
-   
 }
 
 img#one {
@@ -606,13 +631,14 @@ form {
     color: rgb(119, 8, 8);
     font-size: 160%;
     font-style: italic;
+    margin-top: 3%;
 }
 .btn-default{
     background-color: rgba(63, 1, 1, 0.856);
     border-color: rgb(51, 3, 3);
     color: white;
     align: center;
-    margin-top: 2em;
+    margin-top: 3em;
     margin-bottom: 3em;
 }
 
