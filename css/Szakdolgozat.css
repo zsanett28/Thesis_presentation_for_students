@@ -598,6 +598,14 @@ footer{
 
 .end{
     font-style: italic;
+    margin-top: 3%;
+}
+
+@media (max-width: 767px){
+    .end{
+        font-style: italic;
+        margin-top: 10%;
+    }
 }
 
 .link{
