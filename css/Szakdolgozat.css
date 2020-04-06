@@ -647,7 +647,7 @@ form {
     margin-top: 3%;
 }
 .btn-default{
-    background-color: rgba(63, 1, 1, 0.856);
+    background-color: rgb(88, 4, 4);
     border-color: rgb(51, 3, 3);
     color: white;
     align: center;
@@ -656,7 +656,7 @@ form {
 }
 
 .btn-default:hover{
-    background-color: rgba(70, 8, 8, 0.767);
+    background-color: rgb(73, 7, 7);
     border-color: rgb(51, 3, 3);
     color: white;
 }
