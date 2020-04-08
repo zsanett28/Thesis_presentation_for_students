@@ -660,3 +660,11 @@ form {
     border-color: rgb(51, 3, 3);
     color: white;
 }
+
+.paragraf-teacher{
+    margin-top: 6%;
+    color: rgb(88, 4, 4);
+    font-family: Georgia;
+    font-size: 150%;
+    font-weight: bold;
+}
