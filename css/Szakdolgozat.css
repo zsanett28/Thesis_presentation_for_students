@@ -187,125 +187,57 @@ body {
 
 img#one {
     border-radius: 8px;
-    width: 30%;
+    width: 38%;
     position: relative;
-    transform: translate(2%,55%);
+    transform: translate(8%,20%);
 }
 
 img#two {
     border-radius: 8px;
-    width: 38%;
+    width: 48%;
     position: relative;
-    transform: translate(-70%,195%);
+    transform: translate(20%,50%);
 }
 
 img#three {
     border-radius: 8px;
-    width: 28%;
+    width: 30%;
     position: relative;
-    transform: translate(-90%,25%);
+    transform: translate(20%,50%);
 }
 
 img#four {
     border-radius: 8px;
-    width: 35%;
+    width: 40%;
     position: relative;
-    transform: translate(95%,20%);
+    transform: translate(50%,100%);
 }
 
 img#five {
     border-radius: 8px;
-    width: 20%;
+    width: 38%;
     position: relative;
-    transform: translate(65%,195%);
+    transform: translate(15%,130%);
 }
 
 img#six {
     border-radius: 8px;
-    width: 30%;
+    width: 35%;
     position: relative;
-    transform: translate(45%,-30%);
+    transform: translate(-80%,30%);
 }
 
 img#seven {
     border-radius: 8px;
-    width: 26%;
+    width: 38%;
     position: relative;
-    transform: translate(280%,10%);
+    transform: translate(150%,30%);
 }
 
-@media (min-width:1257px) and (max-width: 1280px){
-    .pictures{
-        margin-top: 5%;
-    }
-}
-
-@media (min-width:1200px) and (max-width: 1256px){
+@media (max-width:1199px){
     .pictures{
         margin-top: 7%;
     }
-}
-
-@media (min-width:1051px) and (max-width: 1199px){
-    .pictures{
-        margin-top: 10%;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1050px) {
-
-    .pictures{
-        margin-top: 0%;
-    }
-    img#one {
-        border-radius: 8px;
-        width: 38%;
-        position: relative;
-        transform: translate(8%,70%);
-    }
-
-    img#two {
-        border-radius: 8px;
-        width: 48%;
-        position: relative;
-        transform: translate(20%,100%);
-    }
-
-    img#three {
-        border-radius: 8px;
-        width: 30%;
-        position: relative;
-        transform: translate(20%,140%);
-    }
-
-    img#four {
-        border-radius: 8px;
-        width: 40%;
-        position: relative;
-        transform: translate(50%,150%);
-    }
-
-    img#five {
-        border-radius: 8px;
-        width: 38%;
-        position: relative;
-        transform: translate(15%,180%);
-    }
-
-    img#six {
-        border-radius: 8px;
-        width: 35%;
-        position: relative;
-        transform: translate(-80%,90%);
-    }
-
-    img#seven {
-        border-radius: 8px;
-        width: 38%;
-        position: relative;
-        transform: translate(150%,80%);
-    }
-
 }
 
 @media (max-width: 991px){
@@ -315,6 +247,55 @@ img#seven {
         margin-right: 5%;
         margin-left: 5%;
     }
+    img#one {
+        border-radius: 8px;
+        width: 30%;
+        position: relative;
+        transform: translate(2%,55%);
+    }
+    
+    img#two {
+        border-radius: 8px;
+        width: 38%;
+        position: relative;
+        transform: translate(-70%,195%);
+    }
+    
+    img#three {
+        border-radius: 8px;
+        width: 28%;
+        position: relative;
+        transform: translate(-90%,25%);
+    }
+    
+    img#four {
+        border-radius: 8px;
+        width: 35%;
+        position: relative;
+        transform: translate(95%,20%);
+    }
+    
+    img#five {
+        border-radius: 8px;
+        width: 20%;
+        position: relative;
+        transform: translate(65%,195%);
+    }
+    
+    img#six {
+        border-radius: 8px;
+        width: 30%;
+        position: relative;
+        transform: translate(45%,-30%);
+    }
+    
+    img#seven {
+        border-radius: 8px;
+        width: 26%;
+        position: relative;
+        transform: translate(280%,10%);
+    }
+
 }
 
 .first {
