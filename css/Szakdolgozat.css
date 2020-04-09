@@ -9,7 +9,7 @@ body {
     box-sizing: border-box;
     position: relative;
     min-height: 100%;
-    padding-bottom: 5%;
+    padding-bottom: 12%;
 }
 
 .container-back {
@@ -603,7 +603,7 @@ form {
 }
 
 .form-title{
-    font-size: 200%;
+    font-size: 170%;
     color: rgb(51, 3, 3);
     font-family: Arial;
     text-align: center;
@@ -626,7 +626,6 @@ form {
     background-color: rgb(88, 4, 4);
     border-color: rgb(51, 3, 3);
     color: white;
-    align: center;
     margin-top: 3em;
     margin-bottom: 3em;
 }
@@ -641,6 +640,22 @@ form {
     margin-top: 6%;
     color: rgb(88, 4, 4);
     font-family: Georgia;
-    font-size: 150%;
+    font-size: 140%;
     font-weight: bold;
+    text-align: center;
+    border: solid;
+    border-width: thin;
+    border-color: rgb(73, 7, 7);
+    padding: 2%;
+    border-radius: 30px 10px;
+}
+
+.long {
+    margin-top: 20%;
+}
+
+@media (max-width: 991px){
+    .long {
+        margin-top: 0;
+    }
 }
