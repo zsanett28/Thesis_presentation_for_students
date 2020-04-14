@@ -533,8 +533,37 @@ footer{
     
 }
 
+.file{
+    text-decoration: underline;
+    color: rgb(1, 93, 199);
+}
+
 .list-item2 {
     text-decoration: none;
+    font-size: 120%;
+    font-weight: bold;
+    list-style-type: circle;
+    color: rgb(88, 4, 4);
+    margin-left: 10%;
+}
+
+.description{
+    font-size: 100%;
+    color: rgb(51, 3, 3);
+    margin-left: 10%;
+}
+
+.department{
+    font-size: 100%;
+    color: rgb(51, 3, 3);
+    margin-left: 25%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.list-item3{
+    text-decoration: none;
+    font-size: 100%;
     list-style-type: circle;
     color: rgb(51, 3, 3);
     margin-left: 10%;
@@ -570,6 +599,11 @@ footer{
     color: rgb(119, 8, 8);
 }
 
+.link:hover{
+    text-decoration: underline;
+    color: rgb(51, 3, 3);
+}
+
 .single-paragraf{
     font-size: 120%;
     color: rgb(51, 3, 3);
@@ -603,6 +637,7 @@ form {
     font-style: italic;
     margin-top: 3%;
 }
+
 .btn-default{
     background-color: rgb(88, 4, 4);
     border-color: rgb(51, 3, 3);
@@ -616,6 +651,32 @@ form {
     border-color: rgb(51, 3, 3);
     color: white;
 }
+
+.btn-default:active{
+    background-color: rgb(73, 7, 7);
+    border-color: rgb(51, 3, 3);
+    color: white;
+}
+
+.btn-default:focus{
+    background-color: rgb(73, 7, 7);
+    border-color: rgb(51, 3, 3);
+    color: white;
+}
+
+.btn-default:active:focus{
+    background-color: rgb(73, 7, 7);
+    border-color: rgb(51, 3, 3);
+    color: white;
+}
+
+/*#feedback{
+    background-color: rgba(5, 189, 66, 0.719);
+    text-align: center;
+    border: solid;
+    border-width: thin;
+    border-color: rgb(1, 131, 34);
+}*/
 
 .paragraf-teacher{
     margin-top: 6%;
