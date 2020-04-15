@@ -15,7 +15,7 @@ body {
 .container-back {
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     position: relative;
 }
 
@@ -632,31 +632,6 @@ img#presentation{
     }
 }
 
-.contact {
-    margin-top: 2%;
-}
-
-.one-line-paragraf{
-    font-size: 120%;
-    color: rgb(51, 3, 3);
-    font-family: 'Arial';
-    text-align: justify;
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
-.end{
-    font-style: italic;
-    margin-top: 3%;
-}
-
-@media (max-width: 767px){
-    .end{
-        font-style: italic;
-        margin-top: 10%;
-    }
-}
-
 .link{
     text-decoration: underline;
     color: rgb(119, 8, 8);
@@ -742,7 +717,6 @@ form {
 }*/
 
 .paragraf-teacher{
-    margin-top: 6%;
     color: rgb(88, 4, 4);
     font-family: 'Georgia';
     font-size: 140%;
@@ -763,4 +737,28 @@ form {
     .long {
         margin-top: 0;
     }
+}
+
+.university-name-paragraf{
+    color: rgb(51, 3, 3);
+    font-family: 'Gerogia';
+    font-size: 160%;
+    margin-top: 3%;
+}
+
+.one-line-paragraf{
+    font-size: 120%;
+    color: rgb(51, 3, 3);
+    font-family: 'Arial';
+}
+
+.contact{
+    font-family: 'Gerogia';
+    font-size: 120%;
+    font-weight: bold;
+}
+
+img#contact-image{
+    width: 70%;
+    border-radius: 10%;
 }
