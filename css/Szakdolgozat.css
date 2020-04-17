@@ -5,7 +5,7 @@ html {
 body {
     background-color:rgba(199, 193, 193, 0.555);
     background-repeat: no-repeat;
-    -moz-box-sizing: border-box;
+    /*-moz-box-sizing: border-box;*/
     box-sizing: border-box;
     position: relative;
     min-height: 100%;
@@ -390,12 +390,11 @@ img#seven {
 .menulink {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 130%;
     font-family: 'Georgia';
     letter-spacing: 1px;
     line-height: 3;
     position: relative;
-    font-weight: 50;
 }
 
 .menulink::before,.menulink::after {
@@ -411,11 +410,11 @@ img#seven {
 }
 
 .menulink::before {
-    top: 0;
+    top: 1%;
 }
 
 .menulink::after {
-    bottom: 0;
+    bottom: 1%;
 }
 
 .menulink:hover::before, .menulink:hover::after {
