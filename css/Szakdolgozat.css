@@ -787,7 +787,30 @@ form {
     font-weight: bold;
 }
 
-img#contact-image{
-    width: 70%;
-    border-radius: 10%;
+.paragraf-book{
+    margin-top: 2%;
+    font-size: 120%;
+    color: rgb(51, 3, 3);
+    font-family: 'Arial';
+    text-indent: 3%;
+}
+
+.list-item4{
+    margin-top: 2%;
+    font-size: 140%;
+    color: rgb(51, 3, 3);
+}
+
+.list-item5{
+    margin-top: 2%;
+    font-size: 120%;
+    color: rgb(88, 4, 4);
+}
+
+.list-item6{
+    text-decoration: none;
+    list-style-type: disc;
+    font-style: italic;
+    font-size: 100%;
+    color: rgb(51, 3, 3);
 }
