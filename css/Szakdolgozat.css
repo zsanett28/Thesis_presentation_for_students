@@ -410,11 +410,11 @@ img#seven {
 }
 
 .menulink::before {
-    top: 1%;
+    top: 0;
 }
 
 .menulink::after {
-    bottom: 1%;
+    bottom: 0;
 }
 
 .menulink:hover::before, .menulink:hover::after {
@@ -426,20 +426,52 @@ img#seven {
     color: white;
 }
 
-table#t01 {
-    width: 60%;
-    position: relative;
-    left: 40%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.menulink:focus{
+    text-decoration: none;
+    color: white;
+}
+
+.active{
+    text-decoration: none;
+    color: white;
+    font-size: 140%;
+    border-left: 3px solid;
+    padding: 4px;
+}
+
+.active:hover{
+    text-decoration: none;
+    color: white;
+    border-left: 3px solid;
+    padding: 4px;
+}
+
+.active:hover::before, .active:hover::after{
+    transform: scaleX(0);
+}
+
+.table-title{
+    font-family: 'Georgia';
+    font-size: 180%;
+    color: rgb(88, 4, 4);
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+#t01, #t02, #t03 {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
 }
 
 td {
-    font-size: 120%;
+    font-size: 110%;
     color: rgb(51, 3, 3);
     font-family: 'Arial';
-    padding: 5px;
-    text-align: left;
+    padding: 1%;
+    border-bottom: 1px solid rgb(179, 177, 177);
 }
 
 td:nth-child(1) {
@@ -447,25 +479,25 @@ td:nth-child(1) {
     font-weight: bold;
 }
 
-@media (max-width: 1102px){
+td:nth-child(2) {
+    text-align: right;
+}
 
+
+@media (max-width: 991px){
+
+    #t01, #t02, #t03{
+        width: 100%;
+    }
     td {
         font-size: 100%;
-        color: rgb(51, 3, 3);
-        font-family: 'Arial';
-        padding: 7px;
-        text-align: left;
     }
 }
 
-@media (max-width: 875px){
+@media (max-width: 705px){
 
-    table#t01 {
-        width: 70%;
-        position: relative;
-        left: 20%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+    td:nth-child(2) {
+        text-align: left;
     }
 }
 
@@ -523,6 +555,7 @@ footer{
     font-family: 'Georgia';
     font-weight: bold;
     font-style: italic;
+    margin-top: 2%;
 }
 
 .paragraf {
@@ -641,6 +674,11 @@ img#presentation{
     color: rgb(51, 3, 3);
 }
 
+.link:focus{
+    text-decoration: underline;
+    color: rgb(51, 3, 3);
+}
+
 .single-paragraf{
     font-size: 120%;
     color: rgb(51, 3, 3);
@@ -659,8 +697,7 @@ form {
     color: rgb(51, 3, 3);
     font-family: 'Arial';
     text-align: center;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 
 .form-control{
@@ -707,14 +744,6 @@ form {
     color: white;
 }
 
-/*#feedback{
-    background-color: rgba(5, 189, 66, 0.719);
-    text-align: center;
-    border: solid;
-    border-width: thin;
-    border-color: rgb(1, 131, 34);
-}*/
-
 .paragraf-teacher{
     color: rgb(88, 4, 4);
     font-family: 'Georgia';
@@ -726,6 +755,7 @@ form {
     border-color: rgb(73, 7, 7);
     padding: 2%;
     border-radius: 30px 10px;
+    margin-top: 3%;
 }
 
 .long {
