@@ -564,10 +564,14 @@ footer{
     font-family: 'Arial';
     text-indent: 3%;
     text-align: justify;
-    
 }
 
-.num{
+.bourdon{
+    color: rgb(119, 8, 8);
+    font-weight: bold;
+}
+
+.special-number{
     font-size: 150%;
     font-family: 'Brush Script MT';
 }
@@ -587,13 +591,15 @@ img#print{
         display: block;
         margin-right: auto;
         margin-left: auto;
+        margin-top: 3%;
+        margin-bottom: 3%;
     }
 }
 
 img#presentation{
     width: 100%;
     display: block;
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 10%;
 }
 
@@ -601,8 +607,8 @@ img#presentation{
     img#presentation{
         width: 100%;
         display: block;
-        margin-top: 40%;
-        margin-bottom: 10%;
+        margin-top: 20%;
+        margin-bottom: 20%;
     }
 }
 
@@ -619,43 +625,6 @@ img#presentation{
 .file{
     text-decoration: underline;
     color: rgb(1, 36, 75);
-}
-
-.list-item2 {
-    text-decoration: none;
-    font-size: 120%;
-    list-style-type: square;
-    font-weight: bold;
-    color: rgb(88, 4, 4);
-    margin-left: 10%;
-}
-
-.description{
-    font-size: 100%;
-    color: rgb(51, 3, 3);
-    margin-left: 10%;
-    text-align: justify;
-    margin-right: 10%;
-}
-
-.department{
-    font-size: 100%;
-    color: rgb(51, 3, 3);
-    margin-left: 25%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.list-item3{
-    text-decoration: none;
-    font-size: 100%;
-    list-style-type: square;
-    color: rgb(51, 3, 3);
-    margin-left: 10%;
-}
-
-.top{
-    margin-top: 10%;
 }
 
 @media (max-width: 991px){
@@ -744,7 +713,7 @@ form {
     color: white;
 }
 
-.paragraf-teacher{
+.paragraf-bordered{
     color: rgb(88, 4, 4);
     font-family: 'Georgia';
     font-size: 140%;
@@ -758,14 +727,68 @@ form {
     margin-top: 3%;
 }
 
-.long {
-    margin-top: 20%;
+.xsmall-title{
+    font-size: 130%;
+    color: rgb(88, 4, 4);
+    font-family: 'Georgia';
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 2%;
 }
 
-@media (max-width: 991px){
-    .long {
-        margin-top: 0;
-    }
+.disc-list{
+    list-style-type: disc;
+    font-size: 110%;
+    font-weight: normal;
+    color: rgb(51, 3, 3);
+}
+
+.disc-list-small{
+    list-style-type: disc;
+    font-size: 90%;
+    font-weight: normal;
+    color: rgb(51, 3, 3);
+}
+
+.disc-list-book{
+    list-style-type: disc;
+    font-size: 75%;
+    font-weight: normal;
+    color: rgb(51, 3, 3);
+}
+
+.strait{
+    font-size: 120%;
+    font-weight: bold;
+    color: rgb(88, 4, 4);
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.margin-top-bottom{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.different-columns{
+    font-size: 120%;
+    font-weight: bold;
+    color: rgb(88, 4, 4);
+}
+
+.department{
+    font-size: 100%;
+    color: rgb(51, 3, 3);
+    font-weight: normal;
+    text-indent: 5%;
+}
+
+.description{
+    font-size: 100%;
+    font-weight: normal;
+    color: rgb(51, 3, 3);
+    text-align: justify;
+    margin-right: 10%;
 }
 
 .university-name-paragraf{
@@ -788,29 +811,31 @@ form {
 }
 
 .paragraf-book{
-    margin-top: 2%;
-    font-size: 120%;
-    color: rgb(51, 3, 3);
+    margin-top: 3%;
+    font-size: 100%;
+    color: rgb(88, 4, 4);
     font-family: 'Arial';
-    text-indent: 3%;
+    font-variant: small-caps;
 }
 
-.list-item4{
-    margin-top: 2%;
-    font-size: 140%;
-    color: rgb(51, 3, 3);
-}
-
-.list-item5{
-    margin-top: 2%;
-    font-size: 120%;
+.roman-list{
+    list-style-type: none;
+    font-size: 135%;
+    font-weight: bold;
     color: rgb(88, 4, 4);
 }
 
-.list-item6{
-    text-decoration: none;
-    list-style-type: disc;
-    font-style: italic;
-    font-size: 100%;
-    color: rgb(51, 3, 3);
+.roman-list>li{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.number-list{
+    font-size: 90%;
+    font-weight: normal;
+    color: rgb(119, 8, 8);
+}
+
+.number-list>li{
+    margin-top: 1%;
 }
