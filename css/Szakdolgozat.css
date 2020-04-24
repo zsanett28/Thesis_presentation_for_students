@@ -839,3 +839,17 @@ form {
 .number-list>li{
     margin-top: 1%;
 }
+
+input#r-button{
+    margin-left: 2em;
+}
+
+.checkbox-row{
+    margin-top: 3%;
+}
+
+@media (max-width: 1200px){
+    label{
+        font-size: 90%;
+    }
+}

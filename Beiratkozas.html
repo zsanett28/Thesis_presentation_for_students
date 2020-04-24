@@ -67,7 +67,7 @@
                             </div>
                             <div class="form-group col-md-5">
                                 <label>E-mail cím:</label>
-                                <input type="text" class="form-control">
+                                <input type="email" class="form-control">
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Telefonszám:</label>
@@ -101,11 +101,14 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label>Milyen oktatási formán tanulsz?</label>
-                                <select class="form-control">
+                                <br>
+                                <!--<select class="form-control">
                                     <option selected>Válaszd ki</option>
                                     <option>Nappali képzés</option>
                                     <option>Távoktatás</option>
-                                </select>
+                                </select>-->
+                                <label><input type="radio" name="radiobutton" id="r-button"> Nappali oktatás</label>
+                                <label><input type="radio" name="radiobutton" id="r-button"> Távoktatás</label>
                             </div>
                         </div>
 
@@ -202,6 +205,12 @@
                             <div class="form-group col-md-6">
                                 <label>Amennyiben más vezető tanárt jelöltél meg, írd be a nevét:</label>
                                 <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group checkbox-row col-md-12">
+                                <label><input type="checkbox" name="check"> Beleegyezek, hogy a személyes adataim feldolgozásra kerüljenek!</label>
                             </div>
                         </div>
                         
