@@ -853,3 +853,39 @@ input#r-button{
         font-size: 90%;
     }
 }
+
+.paragraf-centered{
+    text-align: center;
+    font-size: 160%;
+    font-family: 'Georgia';
+    color: rgb(73, 7, 7);
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.center{
+    margin-top: 3%;
+    text-align: center;
+    font-size: 140%;
+    font-variant: small-caps;
+}
+
+p#leadas-februar, p#leadas-junius{
+    text-align: center;
+    font-size: 180%;
+    font-family: 'Georgia';
+    color: rgb(119, 8, 8);
+    margin-bottom: 3%;
+}
+
+.counter-border{
+    border: solid;
+    border-width: thin;
+    border-color: rgb(73, 7, 7);
+    padding: 2%;
+    border-radius: 30px 10px;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
