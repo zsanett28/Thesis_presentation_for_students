@@ -56,3 +56,13 @@ var j = setInterval(function () {
         document.getElementById("leadas-junius").innerHTML = "Lejárt az idő!";
     }
 }, 1000);
+
+function appear(element){
+
+    if (document.getElementById(element).style.display == "none") {
+        document.getElementById(element).style.display = "block";
+      }
+    else {
+        document.getElementById(element).style.display = "none";
+    }   
+}

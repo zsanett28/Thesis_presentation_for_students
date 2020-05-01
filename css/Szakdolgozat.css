@@ -889,3 +889,9 @@ p#leadas-februar, p#leadas-junius{
     margin-left: 10%;
     margin-right: 10%;
 }
+
+#hidden-text1, #hidden-text2, #hidden-text3, #hidden-text4, 
+#hidden-text5, #hidden-text6, #hidden-text7, #hidden-text8,
+#hidden-text9, #hidden-text10, #hidden-text11{
+    display: none;
+}

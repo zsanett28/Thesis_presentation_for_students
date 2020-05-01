@@ -50,113 +50,125 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row long-text">
 
             <div class="col-md-6">
                 <ul class="roman-list">
-                    <li>I. Algoritmusok és programozás</li>
-                        <ol type="1" class="number-list">
-                            <li>Algoritmusok és adatszerkezetek</li>
-                            <ul class="disc-list-small">
-                                <li>Algoritmusok reprezentálása</li>
-                                <li>Vezérlési szerkezetek</li>
-                                <li>Rendezési algoritmusok</li>
-                                <li>Rekurzivítás</li>
-                                <li>Proramozási módszerek: Backtracking, Divide et Impera, Greedy</li>
-                                <li>Adatszerkezetek</li>
-                            </ul>
-                            <li>Objektumorientált programozás</li>
-                            <ul class="disc-list-small">
-                                <li>Az objektumorientált paradigma</li>
-                                <li>Osztályok és objektumok</li>
-                                <li>Konstruktorok és destruktorok</li>
-                                <li>Öröklődés, polimorfizmus, absztrakt osztályok</li>
-                            </ul>
-                        </ol>
-                    <li>II. Adatbázisrendszerek</li>
-                        <ol type="1" class="number-list">
-                            <li>Relációs adatbáziskezelő rendszerek</li>
-                            <ul class="disc-list-small">
-                                <li>Adatbázisok architektúrája. Adatmodellek</li>
-                                <li>Adatbázis-tervezés. Az egyed/kapcsolat adatmodell. Egyed/kapcsolat diagrammok</li>
-                                <li>A relációs adatmodell</li>
+                    <li onclick="appear('hidden-text1')">I. Algoritmusok és programozás</li>
+                        <div id="hidden-text1">
+                            <ol type="1" class="number-list">
+                                <li>Algoritmusok és adatszerkezetek</li>
                                 <ul class="disc-list-small">
-                                    <li>Normálformák és normalizálás</li>
-                                    <li>Műveletek a relációs modellben</li>
-                                    <li>Az SQL nyelv</li>
+                                    <li>Algoritmusok reprezentálása</li>
+                                    <li>Vezérlési szerkezetek</li>
+                                    <li>Rendezési algoritmusok</li>
+                                    <li>Rekurzivítás</li>
+                                    <li>Proramozási módszerek: Backtracking, Divide et Impera, Greedy</li>
+                                    <li>Adatszerkezetek</li>
                                 </ul>
-                            </ul>
-                            <li>Adatbázisok kliens-szerver architektúrája. Kliens-szerver alkalmazások
-                                programozása</li>
-                            <ul class="disc-list-small">
-                                <li>Tárolt eljárások és triggerek</li>
-                                <li>Tranzakciókezelés</li>
-                                <li>Konkurrenciavezérlés</li>
-                            </ul>
-                        </ol>
-                    <li>III. Webes technológiák</li>
-                        <ol type="1" class="number-list">
-                            <li>Relációs adatbáziskezelő rendszerek</li>
-                            <ul class="disc-list-small">
-                                <li>Webes alkalmazások kliens-szerver architektúrája</li>
-                                <li>Webes alkalmazások tevezése. Responsive web design</li>
-                                <li>Kliens oldali technológiák: HTML, CSS, Javascript</li>
-                                <li>Szerver oldali programozás: PHP şi MySQL</li>
+                                <li>Objektumorientált programozás</li>
                                 <ul class="disc-list-small">
-                                    <li>PHP alapok</li>
-                                    <li>HTML űrlapok feldolgozása PHP-ben</li>
-                                    <li>MySQL adatbázis elérése PHP-ből</li>
+                                    <li>Az objektumorientált paradigma</li>
+                                    <li>Osztályok és objektumok</li>
+                                    <li>Konstruktorok és destruktorok</li>
+                                    <li>Öröklődés, polimorfizmus, absztrakt osztályok</li>
                                 </ul>
-                            </ul>
-                        </ol>
+                            </ol>
+                        </div>
+                    <li onclick="appear('hidden-text2')">II. Adatbázisrendszerek</li>
+                        <div id="hidden-text2">
+                            <ol type="1" class="number-list">
+                                <li>Relációs adatbáziskezelő rendszerek</li>
+                                <ul class="disc-list-small">
+                                    <li>Adatbázisok architektúrája. Adatmodellek</li>
+                                    <li>Adatbázis-tervezés. Az egyed/kapcsolat adatmodell. Egyed/kapcsolat diagrammok</li>
+                                    <li>A relációs adatmodell</li>
+                                    <ul class="disc-list-small">
+                                        <li>Normálformák és normalizálás</li>
+                                        <li>Műveletek a relációs modellben</li>
+                                        <li>Az SQL nyelv</li>
+                                    </ul>
+                                </ul>
+                                <li>Adatbázisok kliens-szerver architektúrája. Kliens-szerver alkalmazások
+                                    programozása</li>
+                                <ul class="disc-list-small">
+                                    <li>Tárolt eljárások és triggerek</li>
+                                    <li>Tranzakciókezelés</li>
+                                    <li>Konkurrenciavezérlés</li>
+                                </ul>
+                            </ol>
+                        </div>
+                    <li onclick="appear('hidden-text3')">III. Webes technológiák</li>
+                        <div id="hidden-text3">
+                            <ol type="1" class="number-list">
+                                <li>Relációs adatbáziskezelő rendszerek</li>
+                                <ul class="disc-list-small">
+                                    <li>Webes alkalmazások kliens-szerver architektúrája</li>
+                                    <li>Webes alkalmazások tevezése. Responsive web design</li>
+                                    <li>Kliens oldali technológiák: HTML, CSS, Javascript</li>
+                                    <li>Szerver oldali programozás: PHP şi MySQL</li>
+                                    <ul class="disc-list-small">
+                                        <li>PHP alapok</li>
+                                        <li>HTML űrlapok feldolgozása PHP-ben</li>
+                                        <li>MySQL adatbázis elérése PHP-ből</li>
+                                    </ul>
+                                </ul>
+                            </ol>
+                        </div>
                 </ul>
             </div>
 
             <div class="col-md-6">            
                 <ul class="roman-list">
-                    <li>IV. Informatikai rendszerek tervezése</li>
-                        <ol type="1" class="number-list">
-                            <li>A rendszerfejlesztés lépései</li>
-                            <li>Életciklus modellek</li>
-                            <li>Felhasználói felület tervezése</li>
-                            <li>UML nyelv</li>
-                            <li>UML diagrammok</li>
-                        </ol>
-                    <li>V. Operációs rendszerek. Számítógépes hálózatok.</li>
-                        <ol type="1" class="number-list">
-                            <li>Operációs rendszerek</li>
-                            <ul class="disc-list-small">
-                                <li>Az operációs rendszer fogalma, célja, osztályozása, vázlatos felépítése, fejlődésének mérföldkövei</li>
-                                <li>Memóriakezelés; I/O ütemezés</li>
-                                <li>Az operációs rendszerek biztonsági kérdései</li>
+                    <li onclick="appear('hidden-text4')">IV. Informatikai rendszerek tervezése</li>
+                        <div id="hidden-text4">
+                            <ol type="1" class="number-list">
+                                <li>A rendszerfejlesztés lépései</li>
+                                <li>Életciklus modellek</li>
+                                <li>Felhasználói felület tervezése</li>
+                                <li>UML nyelv</li>
+                                <li>UML diagrammok</li>
+                            </ol>
+                        </div>
+                    <li onclick="appear('hidden-text5')">V. Operációs rendszerek. Számítógépes hálózatok.</li>
+                        <div id="hidden-text5">
+                            <ol type="1" class="number-list">
+                                <li>Operációs rendszerek</li>
+                                <ul class="disc-list-small">
+                                    <li>Az operációs rendszer fogalma, célja, osztályozása, vázlatos felépítése, fejlődésének mérföldkövei</li>
+                                    <li>Memóriakezelés; I/O ütemezés</li>
+                                    <li>Az operációs rendszerek biztonsági kérdései</li>
+                                </ul>
+                                <li>Számítógépes hálózatok arhitectúrája és biztonsága</li>
+                                <ul class="disc-list-small">
+                                    <li>Az adatkapcsolati réteg</li>
+                                    <li>A hálózati réteg</li>
+                                    <li>A szállítási réteg</li>
+                                    <li>A számítógép-hálózatok használata</li>
+                                    <li>Hálózati biztonság</li>
+                                </ul>
+                            </ol>
+                        </div>
+                    <p class="paragraf-book" onclick="appear('hidden-text6')">Bibliográfia</p>
+                        <div id="hidden-text6">
+                            <ul class="disc-list-book">
+                                <li>Avornicului M., Informatikai rendszerek tervezése és menedzsmentje, Ábel Kiadó, 2010</li>
+                                <li>Avornicului M., Programozási nyelvek és környezetek, Ábel Kiadó, 2007</li>
+                                <li>Avornicului M., Seer L. Gazdasági ügyletek az Interneten, Ábel Kiadó, Kolozsvár, 2014</li>
+                                <li>Boian F, Vancea A. Boian R. Bufnea D., Sterca A., Cobarzan C., Cojocar D., Sisteme de operare, Ed.
+                                    Risoprint, 2006
+                                </li>
+                                <li>Ionescu K., Bevezetés az algoritmikába, Egyetemi Kiadó, 2005</li>
+                                <li>Ullman J. D., Widom J. Adatbázisrendszerek, Panem Könyvkiadó, Budapest, 2. kiadás, 2008</li>
+                                <li>Varga I. Adatbázisrendszerek (A relációs modelltől az XML adatokig), Kolozsvári Egyetemi Kiadó, 2005</li>
+                                <li>Nagy Gusztáv, Java programozás, Kecskemét, 2007</li>
+                                <li>Nagy Gusztáv, Web programozás alapismeretek, Ad Librum Kiadó Budapest, 2011</li>
+                                <li>Laura Thomson, Luke Welling, PHP és MySQL webfejlesztőknek - Hogyan építsünk webáruházat?,
+                                    Perfact-Pro Kft., 2010
+                                </li>
+                                <li>Wetherall D., Tanenenbaum A. Számítógép-hálózatok, Panem Kft, Budapest, 2013</li>  
                             </ul>
-                            <li>Számítógépes hálózatok arhitectúrája és biztonsága</li>
-                            <ul class="disc-list-small">
-                                <li>Az adatkapcsolati réteg</li>
-                                <li>A hálózati réteg</li>
-                                <li>A szállítási réteg</li>
-                                <li>A számítógép-hálózatok használata</li>
-                                <li>Hálózati biztonság</li>
-                            </ul>
-                        </ol>
-                    <p class="paragraf-book">Bibliográfia: </p>
-                        <ul class="disc-list-book">
-                            <li>Avornicului M., Informatikai rendszerek tervezése és menedzsmentje, Ábel Kiadó, 2010</li>
-                            <li>Avornicului M., Programozási nyelvek és környezetek, Ábel Kiadó, 2007</li>
-                            <li>Avornicului M., Seer L. Gazdasági ügyletek az Interneten, Ábel Kiadó, Kolozsvár, 2014</li>
-                            <li>Boian F, Vancea A. Boian R. Bufnea D., Sterca A., Cobarzan C., Cojocar D., Sisteme de operare, Ed.
-                                Risoprint, 2006
-                            </li>
-                            <li>Ionescu K., Bevezetés az algoritmikába, Egyetemi Kiadó, 2005</li>
-                            <li>Ullman J. D., Widom J. Adatbázisrendszerek, Panem Könyvkiadó, Budapest, 2. kiadás, 2008</li>
-                            <li>Varga I. Adatbázisrendszerek (A relációs modelltől az XML adatokig), Kolozsvári Egyetemi Kiadó, 2005</li>
-                            <li>Nagy Gusztáv, Java programozás, Kecskemét, 2007</li>
-                            <li>Nagy Gusztáv, Web programozás alapismeretek, Ad Librum Kiadó Budapest, 2011</li>
-                            <li>Laura Thomson, Luke Welling, PHP és MySQL webfejlesztőknek - Hogyan építsünk webáruházat?,
-                                Perfact-Pro Kft., 2010
-                            </li>
-                            <li>Wetherall D., Tanenenbaum A. Számítógép-hálózatok, Panem Kft, Budapest, 2013</li>  
-                        </ul>
+                        </div>
                 </ul>
             </div>
 
@@ -171,69 +183,79 @@
         <div class="row">
             <div class="col-md-6">
                 <ul class="roman-list">
-                    <li>I. A Merketingkutatás rendszere</li>
-                    <ol type="1" class="number-list">
-                        <li>A marketingkutatás meghatározása és szerepe a vállalati döntéshozatalban</li>
-                        <li>A kutatási probléma meghatározása és megközelítésének kidolgozása</li>
-                    </ol>
-                    <li>II. A kutatási terv kialakítása</li>
-                    <ol type="1" class="number-list">
-                        <li>A kutatási terv kialakítása</li>
-                        <li>Feltáró kutatási módszerek: szekunder adatok (a szekunder adatok előnyei és hátrányai a primer</li>
-                        <li>Leíró kutatási módszerek: megkérdezés és megfigyelés</li>
-                        <li>Mérési módszerek a marketingkutatásban: alap és összehasonlító skálaképzés</li>
-                        <li>Mérési módszerek a marketingkutatásban: nem összehasonlító skálaképzési technikák</li>
-                        <li>Kérdőívszerkesztés és nyomtatványok tervezése</li>
-                    </ol>
-                    <li>III. Fogyasztói magatartás</li>
-                    <ol type="1" class="number-list">
-                        <li>A vásárlási döntési folyamat</li>
-                        <li>A referenciacsoportok befolyása a fogyasztói magatartásra</li>
-                        <li>A fogyasztói percepció és következményei a marketing területeire</li>
-                        <li>A fogyasztó attitűdje és a hatása a vásárlási döntésre</li>
-                    </ol>
+                    <li onclick="appear('hidden-text7')">I. A Merketingkutatás rendszere</li>
+                    <div id="hidden-text7">
+                        <ol type="1" class="number-list">
+                            <li>A marketingkutatás meghatározása és szerepe a vállalati döntéshozatalban</li>
+                            <li>A kutatási probléma meghatározása és megközelítésének kidolgozása</li>
+                        </ol>
+                    </div>
+                    <li onclick="appear('hidden-text8')">II. A kutatási terv kialakítása</li>
+                    <div id="hidden-text8">
+                        <ol type="1" class="number-list">
+                            <li>A kutatási terv kialakítása</li>
+                            <li>Feltáró kutatási módszerek: szekunder adatok (a szekunder adatok előnyei és hátrányai a primer</li>
+                            <li>Leíró kutatási módszerek: megkérdezés és megfigyelés</li>
+                            <li>Mérési módszerek a marketingkutatásban: alap és összehasonlító skálaképzés</li>
+                            <li>Mérési módszerek a marketingkutatásban: nem összehasonlító skálaképzési technikák</li>
+                            <li>Kérdőívszerkesztés és nyomtatványok tervezése</li>
+                        </ol>
+                    </div>
+                    <li onclick="appear('hidden-text9')">III. Fogyasztói magatartás</li>
+                    <div id="hidden-text9">
+                        <ol type="1" class="number-list">
+                            <li>A vásárlási döntési folyamat</li>
+                            <li>A referenciacsoportok befolyása a fogyasztói magatartásra</li>
+                            <li>A fogyasztói percepció és következményei a marketing területeire</li>
+                            <li>A fogyasztó attitűdje és a hatása a vásárlási döntésre</li>
+                        </ol>
+                    </div>
                 </ul>
             </div>
 
             <div class="col-md-6">
                 <ul class="roman-list">
-                    <li>IV. Marketingtervezés</li>
-                    <ol type="1" class="number-list">
-                        <li>Bevezetés a marketingterv készítésébe</li>
-                        <li>A marketingterv szerkezete</li>
-                        <li>A vezetői összefoglaló</li>
-                        <li>Helyzetelemzés</li>
-                        <ul class="disc-list-small">
-                            <li>A makrokörnyezet elemzése</li>
-                            <li>Az iparági környezet elemzése</li>
-                            <li>Versenytársak elemzése</li>
-                            <li>A vállalat és a környezet viszonyának elemzése</li>
+                    <li onclick="appear('hidden-text10')">IV. Marketingtervezés</li>
+                    <div id="hidden-text10">
+                        <ol type="1" class="number-list">
+                            <li>Bevezetés a marketingterv készítésébe</li>
+                            <li>A marketingterv szerkezete</li>
+                            <li>A vezetői összefoglaló</li>
+                            <li>Helyzetelemzés</li>
+                            <ul class="disc-list-small">
+                                <li>A makrokörnyezet elemzése</li>
+                                <li>Az iparági környezet elemzése</li>
+                                <li>Versenytársak elemzése</li>
+                                <li>A vállalat és a környezet viszonyának elemzése</li>
+                            </ul>
+                            <li>A vevők elemzése</li>
+                            <ul class="disc-list-small">
+                                <li>A vevők elemzése fogyasztói piacokon</li>
+                                <li>A vevők elemzése szervezeti piacokon</li>
+                                <li>Szegmentálás</li>
+                                <li>Célcsoportképzés</li>
+                            </ul>
+                            <li>Marketingcélok</li>
+                            <li>Marketingstratégiák</li>
+                            <li>Marketingeszközök tervezése</li>
+                            <ul class="disc-list-small">
+                                <li>Termékpolitika</li>
+                                <li>Árképzés</li>
+                                <li>Az értékesítési csatornák megtervezése</li>
+                                <li>A vállalat marketingkommunikációs tevékenysége</li>
+                            </ul>
+                            <li>Erőforrás és időterv</li>
+                            <li>Ellenőrzés és visszacsatolás</li>
+                        </ol>
+                    </div>
+                    <p class="paragraf-book" onclick="appear('hidden-text11')">Bibliográfia</p>
+                    <div id="hidden-text11">
+                        <ul class="disc-list-book">
+                            <li>Malhotra K. N., Marketingkutatás, Akadémiai Kiadó, Budapest, 2009</li>
+                            <li>Hofmeister-Tóth Á., A fogyasztói magatartás alapjai, Akadémiai Kiadó, Budapest, 2014</li>
+                            <li>Keszey T., Gyulavári T., Marketingtervezés, Akadémiai Kiadó, Budapest, 2016</li>
                         </ul>
-                        <li>A vevők elemzése</li>
-                        <ul class="disc-list-small">
-                            <li>A vevők elemzése fogyasztói piacokon</li>
-                            <li>A vevők elemzése szervezeti piacokon</li>
-                            <li>Szegmentálás</li>
-                            <li>Célcsoportképzés</li>
-                        </ul>
-                        <li>Marketingcélok</li>
-                        <li>Marketingstratégiák</li>
-                        <li>Marketingeszközök tervezése</li>
-                        <ul class="disc-list-small">
-                            <li>Termékpolitika</li>
-                            <li>Árképzés</li>
-                            <li>Az értékesítési csatornák megtervezése</li>
-                            <li>A vállalat marketingkommunikációs tevékenysége</li>
-                        </ul>
-                        <li>Erőforrás és időterv</li>
-                        <li>Ellenőrzés és visszacsatolás</li>
-                    </ol>
-                    <p class="paragraf-book">Bibliográfia: </p>
-                    <ul class="disc-list-book">
-                        <li>Malhotra K. N., Marketingkutatás, Akadémiai Kiadó, Budapest, 2009</li>
-                        <li>Hofmeister-Tóth Á., A fogyasztói magatartás alapjai, Akadémiai Kiadó, Budapest, 2014</li>
-                        <li>Keszey T., Gyulavári T., Marketingtervezés, Akadémiai Kiadó, Budapest, 2016</li>
-                    </ul>
+                    </div>
                 </ul>
             </div>
 
