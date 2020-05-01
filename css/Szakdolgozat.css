@@ -811,7 +811,8 @@ form {
 }
 
 .paragraf-book{
-    margin-top: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-size: 100%;
     color: rgb(88, 4, 4);
     font-family: 'Arial';
@@ -819,15 +820,14 @@ form {
 }
 
 .roman-list{
-    list-style-type: none;
     font-size: 135%;
-    font-weight: bold;
-    color: rgb(88, 4, 4);
+    color: rgb(51, 3, 3);
 }
 
 .roman-list>li{
     margin-top: 2%;
     margin-bottom: 2%;
+    margin-left: 3%;
 }
 
 .number-list{
@@ -892,6 +892,12 @@ p#leadas-februar, p#leadas-junius{
 
 #hidden-text1, #hidden-text2, #hidden-text3, #hidden-text4, 
 #hidden-text5, #hidden-text6, #hidden-text7, #hidden-text8,
-#hidden-text9, #hidden-text10, #hidden-text11{
+#hidden-text9, #hidden-text10, #hidden-text11, #hidden-text12,
+#hidden-text13, #hidden-text14, #hidden-text15, #hidden-text16,
+#hidden-text17, #hidden-text18, #hidden-text19, #hidden-text20{
     display: none;
+}
+
+.pointer{
+    cursor: pointer;
 }
