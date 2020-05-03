@@ -25,11 +25,26 @@ var f = setInterval(function () {
 
     var seconds = Math.floor((time % (1000 * 60)) / 1000);
 
-    document.getElementById("leadas-februar").innerHTML = days + " nap " + hours + " óra " + minutes + " perc " + seconds + " másodperc ";
+    document.getElementById("fdays").innerHTML = days;
+    document.getElementById("fd").innerHTML = "nap";
+    document.getElementById("fhours").innerHTML = hours;
+    document.getElementById("fh").innerHTML = "óra";
+    document.getElementById("fminutes").innerHTML = minutes;
+    document.getElementById("fm").innerHTML = "perc";
+    document.getElementById("fseconds").innerHTML = seconds;
+    document.getElementById("fs").innerHTML = "másodperc";
 
     if(time < 0){
         clearInterval(dfebr);
-        document.getElementById("leadas-februar").innerHTML = "Lejárt az idő!";
+        document.getElementById("fdays").innerHTML = "";
+        document.getElementById("fd").innerHTML = "";
+        document.getElementById("fhours").innerHTML = "";
+        document.getElementById("fh").innerHTML = "";
+        document.getElementById("fminutes").innerHTML = "";
+        document.getElementById("fm").innerHTML = "";
+        document.getElementById("fseconds").innerHTML = "";
+        document.getElementById("fs").innerHTML = "";
+        document.getElementById("timeout1").innerHTML = "Lejárt az idő!";
     }
 }, 1000);
 
@@ -49,17 +64,32 @@ var j = setInterval(function () {
 
     var seconds = Math.floor((time % (1000 * 60)) / 1000);
 
-    document.getElementById("leadas-junius").innerHTML = days + " nap " + hours + " óra " + minutes + " perc " + seconds + " másodperc ";
+    document.getElementById("jdays").innerHTML = days;
+    document.getElementById("jd").innerHTML = "nap";
+    document.getElementById("jhours").innerHTML = hours;
+    document.getElementById("jh").innerHTML = "óra";
+    document.getElementById("jminutes").innerHTML = minutes;
+    document.getElementById("jm").innerHTML = "perc";
+    document.getElementById("jseconds").innerHTML = seconds;
+    document.getElementById("js").innerHTML = "másodperc";
 
     if(time < 0){
         clearInterval(djun);
-        document.getElementById("leadas-junius").innerHTML = "Lejárt az idő!";
+        document.getElementById("jdays").innerHTML = "";
+        document.getElementById("jd").innerHTML = "";
+        document.getElementById("jhours").innerHTML = "";
+        document.getElementById("jh").innerHTML = "";
+        document.getElementById("jminutes").innerHTML = "";
+        document.getElementById("jm").innerHTML = "";
+        document.getElementById("jseconds").innerHTML = "";
+        document.getElementById("js").innerHTML = "";
+        document.getElementById("timeout2").innerHTML = "Lejárt az idő!";
     }
 }, 1000);
 
 function appear(element){
 
-    if (document.getElementById(element).style.display == "none") {
+    if (document.getElementById(element).style.display == "none" || document.getElementById(element).style.display == "") {
         document.getElementById(element).style.display = "block";
       }
     else {
