@@ -840,19 +840,28 @@ form {
     margin-top: 1%;
 }
 
-input#r-button{
+input#feb, input#jun, input#nap, input#tav{
     margin-left: 2em;
+}
+
+@media (max-width: 1199px){
+    input#feb, input#jun, input#nap, input#tav{
+        margin-left: 1em;
+    }
+    label{
+        font-size: 90%;
+    }
 }
 
 .checkbox-row{
     margin-top: 3%;
 }
 
-@media (max-width: 1200px){
+/*@media (max-width: 1200px){
     label{
         font-size: 90%;
     }
-}
+}*/
 
 .paragraf-centered{
     text-align: center;

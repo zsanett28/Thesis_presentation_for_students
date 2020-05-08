@@ -22,7 +22,7 @@
         <img class="background" alt="Háttérkép" src="images\ballagas.jpg">
         <div class="background-text">
             <div class="col-md-12">
-                <h1 class="title">Beiratkozás</h1>
+                <h1 class="title">Téma és tanár választás</h1>
             </div>
         </div>
 
@@ -77,7 +77,13 @@
 
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <label>Melyik tanévben kezdted az egyetemi képzést?</label>
+                                <label>Milyen vizsgára jelentkezel be?</label>
+                                <br>
+                                <label><input type="radio" name="radiobutton1" id="feb" value="Februári szesszió"> Februári szesszió</label>
+                                <label><input type="radio" name="radiobutton1" id="jun" value="Júniusi szesszió"> Júniusi szesszió</label>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>Melyik tanévben kezdted az egyetemet?</label>
                                 <select class="form-control">
                                     <option selected>Válaszd ki</option>
                                     <option>2018/2019</option>
@@ -92,28 +98,15 @@
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
-                                <label>Milyen vizsgára jelentkezel be?</label>
-                                <select class="form-control">
-                                    <option selected>Válaszd ki</option>
-                                    <option>2020 februári szesszió</option>
-                                    <option>2020 júniusi szesszió</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-4">
                                 <label>Milyen oktatási formán tanulsz?</label>
                                 <br>
-                                <!--<select class="form-control">
-                                    <option selected>Válaszd ki</option>
-                                    <option>Nappali képzés</option>
-                                    <option>Távoktatás</option>
-                                </select>-->
-                                <label><input type="radio" name="radiobutton" id="r-button"> Nappali oktatás</label>
-                                <label><input type="radio" name="radiobutton" id="r-button"> Távoktatás</label>
+                                <label><input type="radio" name="radiobutton2" id="nap" value="Nappali oktatás"> Nappali oktatás</label>
+                                <label><input type="radio" name="radiobutton2" id="tav" value="Távoktatás"> Távoktatás</label>
                             </div>
                         </div>
 
                         <div class="form-row">
-                            <div class="form-group col-md-5">
+                            <div class="form-group col-md-6">
                                 <label>Milyen szakirányon írod a dolgozatod?</label>
                                 <select class="form-control">
                                     <option selected>Válaszd ki</option>
@@ -124,7 +117,7 @@
                                     <option>Egyéb</option>
                                 </select>
                             </div>
-                            <div class="form-group col-md-7">
+                            <div class="form-group col-md-6">
                                 <label>Amennyiben az egyéb opciót választottad, írd be a szakirány nevét:</label>
                                 <input type="text" class="form-control">
                             </div>
@@ -216,7 +209,7 @@
                         
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <button class="btn btn-default center-block" onclick="feedback();return false">Bejelentkezés</button>
+                                <button class="btn btn-default center-block" onclick="feedback();return false">Küldés</button>
                             </div>
                         </div>
 
@@ -247,7 +240,7 @@
                         <a href="Temajavaslatok.html" class ="menulink">Témajavaslatok</a>
                     </li>
                     <li class="list-item1">
-                        <a href="Beiratkozas.html" class ="menulink active">Beiratkozás</a>
+                        <a href="Beiratkozas.html" class ="menulink active">Téma és tanár választás</a>
                     </li>
                     <li class="list-item1">
                         <a href="Szakdolgozat.html" class ="menulink">Szakdolgozat elkészítése</a>

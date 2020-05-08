@@ -6,7 +6,7 @@ menuIcon.addEventListener("click", () => {
 })
 
 function feedback(){
-    alert("Sikeres bejelentkezés!");
+    alert("A kitöltött űrlapot sikeresen elküldtük!");
 }
 
 var dfebr = new Date("Febr 11, 2020 23:59:59").getTime();
