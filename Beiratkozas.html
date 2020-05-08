@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css\bootstrap.min.css">
     <link rel="stylesheet" href="css\all.css">
     <link rel="stylesheet" href="css\Szakdolgozat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -47,31 +48,36 @@
                         akkor megkérünk egyeztess a jövendőbeli vezető tanároddal/tanáraiddal.
                     </p>
 
-                    <form>
+                    <form id="form1">
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Családnév:</label>
-                                <input type="text" class="form-control" id="fam-name">
+                                <input type="text" class="form-control" id="second-name">
+                                <span class="error" id="second-name-error"></span>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Keresztnév:</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="first-name">
+                                <span class="error" id="first-name-error"></span>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label>Anyakönyvi szám (nr. matricol):</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="matricol">
+                                <span class="error" id="matricol-error"></span>
                             </div>
                             <div class="form-group col-md-5">
                                 <label>E-mail cím:</label>
-                                <input type="email" class="form-control">
+                                <input type="email" class="form-control" id="email">
+                                <span class="error" id="email-error"></span>
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Telefonszám:</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id ="tel">
+                                <span class="error" id="tel-error"></span>
                             </div>
                         </div>
 
@@ -84,7 +90,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label>Melyik tanévben kezdted az egyetemet?</label>
-                                <select class="form-control">
+                                <select class="form-control" id="drop-down1">
                                     <option selected>Válaszd ki</option>
                                     <option>2018/2019</option>
                                     <option>2017/2018</option>
@@ -108,7 +114,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Milyen szakirányon írod a dolgozatod?</label>
-                                <select class="form-control">
+                                <select class="form-control" id="drop-down2">
                                     <option selected>Válaszd ki</option>
                                     <option>Gazdasági informatika</option>
                                     <option>Marketing</option>
@@ -119,7 +125,8 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Amennyiben az egyéb opciót választottad, írd be a szakirány nevét:</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="egyeb-szakirany">
+                                <span class="error" id="egyeb-szakirany-error"></span>
                             </div>
                         </div>
 
@@ -127,14 +134,15 @@
                             <div class="form-group col-md-12">
                                 <p class="option-paragraf">1. opció</p>
                                 <label>A dolgozat témája:</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="tema1">
+                                <span class="error" id="tema1-error"></span>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Témavezető tanár:</label>
-                                <select class="form-control">
+                                <select class="form-control" id="drop-down3">
                                     <option selected>Válaszd ki</option>
                                     <option>dr. Alt Mónika-Anetta</option>
                                     <option>dr. Avornicului Mihai-Constantin</option>
@@ -158,7 +166,8 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Amennyiben más vezető tanárt jelöltél meg, írd be a nevét:</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="tanar1">
+                                <span class="error" id="tanar1-error"></span>
                             </div>
                         </div>
 
@@ -166,14 +175,15 @@
                             <div class="form-group col-md-12">
                                 <p class="option-paragraf">2. opció</p>
                                 <label>A dolgozat témája:</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="tema2">
+                                <span class="error" id="tema2-error"></span>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Témavezető tanár:</label>
-                                <select class="form-control">
+                                <select class="form-control" id="drop-down4">
                                     <option selected>Válaszd ki</option>
                                     <option>dr. Alt Mónika-Anetta</option>
                                     <option>dr. Avornicului Mihai-Constantin</option>
@@ -197,19 +207,21 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Amennyiben más vezető tanárt jelöltél meg, írd be a nevét:</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="tanar2">
+                                <span class="error" id="tanar2-error"></span>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group checkbox-row col-md-12">
-                                <label><input type="checkbox" name="check"> Beleegyezek, hogy a személyes adataim feldolgozásra kerüljenek!</label>
+                                <label><input type="checkbox" name="check" id="check-box"> Beleegyezek, hogy a személyes adataim feldolgozásra kerüljenek!</label>
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <button class="btn btn-default center-block" onclick="feedback();return false">Küldés</button>
+                                <button type="submit" class="btn btn-default center-block" onclick="feedback();return false">Küldés</button>
+                                <!--onclick="feedback();return false"-->
                             </div>
                         </div>
 

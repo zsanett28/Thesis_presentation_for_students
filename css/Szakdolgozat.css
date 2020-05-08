@@ -949,3 +949,13 @@ input#feb, input#jun, input#nap, input#tav{
     border-bottom: 1px solid rgb(179, 177, 177);
     padding-bottom: 5%;
 }
+
+.error{
+    background-color: rgba(141, 17, 17, 0.904);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1%;
+    position: absolute;
+    z-index: 1;
+}
