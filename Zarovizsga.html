@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css\bootstrap.min.css">
     <link rel="stylesheet" href="css\all.css">
     <link rel="stylesheet" href="css\Szakdolgozat.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -57,8 +58,8 @@
 
                 <div class="row">
                     <ol type="I" class="roman-list">
-                        <li class="pointer" onclick="appear('hidden-text1')">Algoritmusok és programozás</li>
-                            <div id="hidden-text1">
+                        <li class="pointer show-hide">Algoritmusok és programozás</li>
+                            <div class="hidden-text">
                                 <ol type="1" class="number-list">
                                     <li>Algoritmusok és adatszerkezetek</li>
                                     <ul class="disc-list-small">
@@ -78,8 +79,8 @@
                                     </ul>
                                 </ol>
                             </div>
-                        <li class="pointer" onclick="appear('hidden-text2')">Adatbázisrendszerek</li>
-                            <div id="hidden-text2">
+                        <li class="pointer show-hide">Adatbázisrendszerek</li>
+                            <div class="hidden-text">
                                 <ol type="1" class="number-list">
                                     <li>Relációs adatbáziskezelő rendszerek</li>
                                     <ul class="disc-list-small">
@@ -743,7 +744,7 @@
                         <a href="Fontos_datumok.html" class ="menulink">Fontos határidők</a>
                     </li>
                     <li class="list-item1">
-                        <a href="#" class ="menulink">Gyakran feltett kérdések</a>
+                        <a href="GYIK.html" class ="menulink">Gyakran feltett kérdések</a>
                     </li>
                     <li class="list-item1">
                         <a href="Kapcsolat.html" class ="menulink">Kapcsolat</a>

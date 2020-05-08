@@ -87,7 +87,7 @@ var j = setInterval(function () {
     }
 }, 1000);
 
-function appear(element){
+/*function appear(element){
 
     if (document.getElementById(element).style.display == "none" || document.getElementById(element).style.display == "") {
         document.getElementById(element).style.display = "block";
@@ -95,4 +95,16 @@ function appear(element){
     else {
         document.getElementById(element).style.display = "none";
     }   
-}
+}*/
+
+
+$(document).ready(function(){
+    $(".show-hide").click(function(){
+        if($(".hidden-text").css("display") == "none"){
+            $(".hidden-text").show("slow");
+        }
+        else{
+            $(".hidden-text").hide("slow");
+        }
+    });
+});

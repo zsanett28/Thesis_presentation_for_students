@@ -920,6 +920,10 @@ input#feb, input#jun, input#nap, input#tav{
     }
 }
 
+.hidden-text{
+    display: none;
+}
+
 #hidden-text1, #hidden-text2, #hidden-text3, #hidden-text4, 
 #hidden-text5, #hidden-text6, #hidden-text7, #hidden-text8,
 #hidden-text9, #hidden-text10, #hidden-text11, #hidden-text12,
@@ -932,6 +936,16 @@ input#feb, input#jun, input#nap, input#tav{
     cursor: pointer;
 }
 
-#more{
+/*#more{
     display: none;
+}*/
+
+.bold{
+    font-weight: bold;
+}
+
+.border-bottom{
+    margin-top: 3%;
+    border-bottom: 1px solid rgb(179, 177, 177);
+    padding-bottom: 5%;
 }
