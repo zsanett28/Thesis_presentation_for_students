@@ -19,6 +19,16 @@ $(function(){
             $(this.nextElementSibling).toggle(600);
         });
     }
+
+    var element = document.getElementsByClassName("list-accordion");
+    var i;
+
+    for (i = 0; i < element.length; i++) {
+        element[i].addEventListener("click",function() {
+            $(this.nextElementSibling).slideToggle("slow");
+        });
+    }
+
 });
 
 /* Form validator functions */

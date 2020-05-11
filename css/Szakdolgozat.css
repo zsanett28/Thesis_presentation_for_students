@@ -782,6 +782,7 @@ form {
 }
 
 .description{
+    display: none;
     font-size: 100%;
     font-weight: normal;
     color: rgb(51, 3, 3);
