@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color:rgba(199, 193, 193, 0.555);
+    background-color: rgba(199, 193, 193, 0.555);
     background-repeat: no-repeat;
     /*-moz-box-sizing: border-box;*/
     box-sizing: border-box;
@@ -752,7 +752,6 @@ form {
     font-size: 75%;
     font-weight: normal;
     color: rgb(51, 3, 3);
-    padding: 0%;
     text-align: justify;
 }
 
@@ -893,7 +892,7 @@ input#feb, input#jun, input#nap, input#tav{
 
 #countdown-table1 td, #countdown-table2 td{
     padding-right: 5%;
-    padding-left: 5%;
+    padding-left: 3%;
 }
 
 .time{
@@ -920,7 +919,7 @@ input#feb, input#jun, input#nap, input#tav{
     }
 }
 
-.hidden-text{
+/*.hidden-text{
     display: none;
 }
 
@@ -930,7 +929,7 @@ input#feb, input#jun, input#nap, input#tav{
 #hidden-text13, #hidden-text14, #hidden-text15, #hidden-text16,
 #hidden-text17, #hidden-text18, #hidden-text19, #hidden-text20{
     display: none;
-}
+}*/
 
 .pointer{
     cursor: pointer;
@@ -958,4 +957,31 @@ input#feb, input#jun, input#nap, input#tav{
     padding: 1%;
     position: absolute;
     z-index: 1;
+}
+
+.panel {
+    padding: 1%;
+    display: none;
+    background-color: rgba(199, 193, 193, 0);
+    overflow: hidden;
+}
+
+.active-panel{
+    font-size: 115%;
+    padding: 1%;
+}
+
+.accordion {
+    transition: 0.5s;
+}
+  
+.clock{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 18px 1px;
+    border-radius: 2px;
 }

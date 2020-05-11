@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css\bootstrap.min.css">
     <link rel="stylesheet" href="css\all.css">
     <link rel="stylesheet" href="css\Szakdolgozat.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js\jquery.min.js"></script>
 </head>
 
 <body>
@@ -58,8 +58,8 @@
 
                 <div class="row">
                     <ol type="I" class="roman-list">
-                        <li class="pointer show-hide">Algoritmusok és programozás</li>
-                            <div class="hidden-text">
+                        <li class="pointer accordion">Algoritmusok és programozás</li>
+                            <div class="panel">
                                 <ol type="1" class="number-list">
                                     <li>Algoritmusok és adatszerkezetek</li>
                                     <ul class="disc-list-small">
@@ -77,10 +77,10 @@
                                         <li>Konstruktorok és destruktorok</li>
                                         <li>Öröklődés, polimorfizmus, absztrakt osztályok</li>
                                     </ul>
-                                </ol>
+                                </ol>  
                             </div>
-                        <li class="pointer show-hide">Adatbázisrendszerek</li>
-                            <div class="hidden-text">
+                        <li class="pointer accordion">Adatbázisrendszerek</li>
+                            <div class="panel">
                                 <ol type="1" class="number-list">
                                     <li>Relációs adatbáziskezelő rendszerek</li>
                                     <ul class="disc-list-small">
@@ -102,8 +102,8 @@
                                     </ul>
                                 </ol>
                             </div>
-                        <li class="pointer" onclick="appear('hidden-text3')">Webes technológiák</li>
-                            <div id="hidden-text3">
+                        <li class="pointer accordion">Webes technológiák</li>
+                            <div class="panel">
                                 <ol type="1" class="number-list">
                                     <li>Relációs adatbáziskezelő rendszerek</li>
                                     <ul class="disc-list-small">
@@ -119,8 +119,8 @@
                                     </ul>
                                 </ol>
                             </div>
-                        <li class="pointer" onclick="appear('hidden-text4')">Informatikai rendszerek tervezése</li>
-                            <div id="hidden-text4">
+                        <li class="pointer accordion">Informatikai rendszerek tervezése</li>
+                            <div class="panel">
                                 <ol type="1" class="number-list">
                                     <li>A rendszerfejlesztés lépései</li>
                                     <li>Életciklus modellek</li>
@@ -129,8 +129,8 @@
                                     <li>UML diagrammok</li>
                                 </ol>
                             </div>
-                        <li class="pointer" onclick="appear('hidden-text5')">Operációs rendszerek. Számítógépes hálózatok.</li>
-                            <div id="hidden-text5">
+                        <li class="pointer accordion">Operációs rendszerek. Számítógépes hálózatok.</li>
+                            <div class="panel">
                                 <ol type="1" class="number-list">
                                     <li>Operációs rendszerek</li>
                                     <ul class="disc-list-small">
@@ -148,8 +148,8 @@
                                     </ul>
                                 </ol>
                             </div>
-                        <p class="paragraf-book pointer" onclick="appear('hidden-text6')">Bibliográfia</p>
-                            <div id="hidden-text6">
+                        <p class="pointer paragraf-book accordion">Bibliográfia</p>
+                            <div class="panel">
                                 <ul class="disc-list-book">
                                     <li>Avornicului M., Informatikai rendszerek tervezése és menedzsmentje, Ábel Kiadó, 2010</li>
                                     <li>Avornicului M., Programozási nyelvek és környezetek, Ábel Kiadó, 2007</li>
@@ -182,15 +182,15 @@
         
                 <div class="row">
                     <ol type="I" class="roman-list">
-                        <li class="pointer" onclick="appear('hidden-text7')">A Merketingkutatás rendszere</li>
-                        <div id="hidden-text7">
+                        <li class="pointer accordion">A Merketingkutatás rendszere</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>A marketingkutatás meghatározása és szerepe a vállalati döntéshozatalban</li>
                                 <li>A kutatási probléma meghatározása és megközelítésének kidolgozása</li>
                             </ol>
                         </div>
-                        <li class="pointer" onclick="appear('hidden-text8')">A kutatási terv kialakítása</li>
-                        <div id="hidden-text8">
+                        <li class="pointer accordion">A kutatási terv kialakítása</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>A kutatási terv kialakítása</li>
                                 <li>Feltáró kutatási módszerek: szekunder adatok (a szekunder adatok előnyei és hátrányai a primer</li>
@@ -200,8 +200,8 @@
                                 <li>Kérdőívszerkesztés és nyomtatványok tervezése</li>
                             </ol>
                         </div>
-                        <li class="pointer" onclick="appear('hidden-text9')">Fogyasztói magatartás</li>
-                        <div id="hidden-text9">
+                        <li class="pointer accordion">Fogyasztói magatartás</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                     <li>A vásárlási döntési folyamat</li>
                                     <li>A referenciacsoportok befolyása a fogyasztói magatartásra</li>
@@ -209,8 +209,8 @@
                                     <li>A fogyasztó attitűdje és a hatása a vásárlási döntésre</li>
                             </ol>
                         </div>
-                        <li class="pointer" onclick="appear('hidden-text10')">Marketingtervezés</li>
-                        <div id="hidden-text10">
+                        <li class="pointer accordion">Marketingtervezés</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>Bevezetés a marketingterv készítésébe</li>
                                 <li>A marketingterv szerkezete</li>
@@ -243,8 +243,8 @@
                                 </ul>
                             </ol>
                         </div>
-                        <p class="paragraf-book pointer" onclick="appear('hidden-text11')">Bibliográfia</p>
-                        <div id="hidden-text11">
+                        <p class="pointer paragraf-book accordion" onclick="appear('hidden-text11')">Bibliográfia</p>
+                        <div class="panel">
                             <ul class="disc-list-book">
                                 <li>Malhotra K. N., Marketingkutatás, Akadémiai Kiadó, Budapest, 2009</li>
                                 <li>Hofmeister-Tóth Á., A fogyasztói magatartás alapjai, Akadémiai Kiadó, Budapest, 2014</li>
@@ -270,8 +270,8 @@
 
                 <div class="row">
                     <ol type="I" class="roman-list">
-                        <li class="pointer" onclick="appear('hidden-text12')">Stratégiai menedzsment</li>
-                        <div id="hidden-text12">
+                        <li class="pointer accordion">Stratégiai menedzsment</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>A teljesítménnyel kapcsolatos tevékenységek a stratégiai menedzsmentben</li>
                                 <ul class="disc-list-small">
@@ -303,8 +303,8 @@
                                 </ul>
                             </ol>
                         </div>
-                        <li class="pointer" onclick="appear('hidden-text13')">Humán erőforrás menedzsment</li>
-                        <div id="hidden-text13">
+                        <li class="pointer accordion">Humán erőforrás menedzsment</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>A munkakörök tervezése és elemzése</li>
                                 <ul class="disc-list-small">
@@ -334,8 +334,8 @@
                                 </ul>
                             </ol>
                         </div>
-                        <li class="pointer" onclick="appear('hidden-text14')">Logisztika</li>
-                        <div id="hidden-text14">
+                        <li class="pointer accordion">Logisztika</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>A logisztikai menedzsment alapjai</li>
                                 <ul class="disc-list-small">
@@ -384,8 +384,8 @@
                                 </ul>
                             </ol>
                         </div>
-                        <li class="pointer" onclick="appear('hidden-text15')">Értékteremtő folyamatok menedzsmentje</li>
-                        <div id="hidden-text15">
+                        <li class="pointer accordion">Értékteremtő folyamatok menedzsmentje</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>Értékteremtő folyamatok stratégiai szerepe</li>
                                 <ul class="disc-list-small">
@@ -431,8 +431,8 @@
                                 </ul>
                             </ol>
                         </div>
-                        <p class="paragraf-book pointer" onclick="appear('hidden-text16')">Bibliográfia</p>
-                        <div id="hidden-text16">
+                        <p class="pointer paragraf-book accordion">Bibliográfia</p>
+                        <div class="panel">
                             <ul class="disc-list-book">
                                 <li>Chikán, A. & Demeter, K. (2004) Az értékteremtő folyamatok menedzsmentje, Aula Kiadó,
                                     Budapest, 2-15 oldalak</li>
@@ -462,8 +462,8 @@
 
                 <div class="row">
                     <ol type="I" class="roman-list">
-                        <li class="pointer" onclick="appear('hidden-text17')">Banki termékek és szolgáltatások. Banki kockázatok kezelése.</li>
-                        <div id="hidden-text17">
+                        <li class="pointer accordion">Banki termékek, szolgáltatások, kockázatok kezelése</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>Bankműveletek</li>
                                 <ul class="disc-list-small">
@@ -496,8 +496,8 @@
                                 </ul>
                             </ol>
                         </div>
-                        <li class="pointer" onclick="appear('hidden-text18')">Vállalati pénzügyek. Beruházás-értékelés.</li>
-                        <div id="hidden-text18">
+                        <li class="pointer accordion">Vállalati pénzügyek. Beruházás-értékelés.</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>A jelenérték és a tőke alternatívaköltsége</li>
                                 <ul class="disc-list-small">
@@ -547,8 +547,8 @@
                                 </ul>
                             </ol> 
                         </div>
-                        <li class="pointer" onclick="appear('hidden-text19')">Pénzügyi piacok. Portfolióelmélet.</li>
-                        <div id="hidden-text19">
+                        <li class="pointer accordion">Pénzügyi piacok. Portfolióelmélet.</li>
+                        <div class="panel">
                             <ol type="1" class="number-list">
                                 <li>Bevezetés a pénzügyi piacokba</li>
                                 <ul class="disc-list-small">
@@ -590,8 +590,8 @@
                                 </ul>
                             </ol>
                         </div>
-                        <p class="paragraf-book pointer" onclick="appear('hidden-text20')">Bibliográfia</p>
-                        <div id="hidden-text20">
+                        <p class="pointer paragraf-book accordion">Bibliográfia</p>
+                        <div class="panel">
                             <ul class="disc-list-book">
                                 <li>Fellegi Miklós (2010), Pénzügyi ismeretek, Miskolci Egyetemi Kiadó, Miskolc,
                                     1. fejezet: 78-97. oldalak</li>
@@ -770,4 +770,5 @@
     </footer>
     
     <script src="js\Szakdolgozat.js"></script>
+    
 </body>
