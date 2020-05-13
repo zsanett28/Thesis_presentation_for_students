@@ -1,9 +1,20 @@
-const menuIcon = document.querySelector(" .hamburger");
-const navigacio = document.querySelector(" .navigacio");
+const menuIcon = document.querySelector("#hamburger");
+const navigacio = document.querySelector(".navigacio");
 
 menuIcon.addEventListener("click", () => {
     navigacio.classList.toggle("change");
 })
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("hamburger").style.top = "3%";
+  } else {
+    document.getElementById("hamburger").style.top = "-100%";
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 /*function feedback(){
     alert("A kitöltött űrlapot sikeresen elküldtük!");

@@ -344,13 +344,14 @@ img#seven {
     align-items: center;
     border-radius: 0 70% 70% 0;
     transition: left 0.8s;
+    z-index: 1;
 }
 
 .change {
     left: 0;
 }
 
-.hamburger {
+#hamburger {
     width: 45px;
     height: 45px;
     position: fixed;
@@ -360,6 +361,7 @@ img#seven {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    transition: top 0.2s;
 }
 
 .sor {
@@ -981,8 +983,8 @@ input#feb, input#jun, input#nap, input#tav{
     background-color: rgba(141, 17, 17, 0.904);
     color: #fff;
     text-align: center;
-    border-radius: 6px;
-    padding: 1%;
+    border-radius: 15px 50px 50px;
+    padding: 0.5em;
     position: absolute;
     z-index: 1;
 }
