@@ -42,6 +42,10 @@ $(function(){
 
 });
 
+$(function() {
+    $("#harmonica").accordion({heightStyle: "content"}); 
+});
+
 /* Form validator functions */
 
 /*function check_second_name(){

@@ -796,10 +796,8 @@ form {
     margin-bottom: 3%;
 }
 
-.different-columns{
-    font-size: 120%;
+.bold{
     font-weight: bold;
-    color: rgb(88, 4, 4);
 }
 
 .department{
@@ -1166,4 +1164,16 @@ img#university-contact{
         margin-left: auto;
         margin-top: 3%;
     }
+}
+
+.list-accordion:hover{
+    font-size: 110%;
+}
+
+.pointer:focus{
+    outline: 0 !important;
+}
+
+.point{
+    font-size: 90%;
 }
