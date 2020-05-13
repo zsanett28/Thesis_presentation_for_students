@@ -615,8 +615,14 @@ img#presentation{
 }
 
 .file{
-    text-decoration: underline;
-    color: rgb(1, 36, 75);
+    text-decoration: none;
+    color: rgb(1, 38, 80);
+}
+
+.file:hover{
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(0, 27, 58);
 }
 
 @media (max-width: 991px){
@@ -625,20 +631,35 @@ img#presentation{
     }
 }
 
+.link-bourdon{
+    text-decoration: underline;
+    color: rgb(88, 4, 4);
+}
+
+.link-bourdon:hover{
+    text-decoration: none;
+    color: rgb(51, 3, 3);
+}
+
 .link{
     text-decoration: underline;
-    color: rgb(119, 8, 8);
+    color: rgb(5, 54, 110);
 }
 
 .link:hover{
-    text-decoration: underline;
-    color: rgb(51, 3, 3);
+    text-decoration: none;
+    color: rgb(3, 32, 65);
 }
 
 .link:focus{
     text-decoration: underline;
-    color: rgb(51, 3, 3);
+    color: rgb(3, 32, 65);
 }
+
+/*.link:visited{
+    text-decoration: underline;
+    color: rgb(71, 3, 102);
+}*/
 
 .single-paragraf{
     font-size: 120%;
@@ -740,6 +761,11 @@ form {
     color: rgb(51, 3, 3);
 }
 
+.list-margin-left{
+    margin-left: 5%;
+    color: rgb(88, 4, 4);
+}
+
 .disc-list-small{
     list-style-type: disc;
     font-size: 90%;
@@ -793,8 +819,9 @@ form {
 .university-name-paragraf{
     color: rgb(51, 3, 3);
     font-family: 'Gerogia';
-    font-size: 160%;
-    margin-top: 3%;
+    font-size: 140%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .one-line-paragraf{
@@ -989,46 +1016,23 @@ input#feb, input#jun, input#nap, input#tav{
 
 img#examen{
     border-radius: 8px;
-    width: 60%;
+    width: 70%;
     position: relative;
-    transform: translate(30%,30%);
+    transform: translate(30%,45%);
 }
 
 @media (max-width: 1199px){
     img#examen{
-        transform: translate(30%,40%);
+        width: 80%;
+        transform: translate(25%,50%);
     }
 }
 
 @media (max-width: 991px){
     img#examen{
-        width: 80%;
-        transform: translate(25%,45%);
-    }
-    .paragraf-link{
-        text-align: left;
-        font-size: 112%;
-    }
-}
-
-@media (max-width: 767px){
-    img#examen{
-        width: 55%;
+        width: 110%;
         position: relative;
-        transform: translate(10px, 10px);
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 2%;
-        margin-bottom: 3%;
-    }
-}
-
-@media (max-width: 550px){
-    img#examen{
-        width: 70%;
-        position: relative;
-        transform: translate(10px, 10px);
+        transform: translate(40%, 10%);
         display: block;
         margin-right: auto;
         margin-left: auto;
@@ -1037,6 +1041,127 @@ img#examen{
     }
 }
 
+@media (max-width: 767px){
+    img#examen{
+        width: 60%;
+        position: relative;
+        transform: translate(0%, 0%);
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+}
+
+@media (max-width: 500px){
+    img#examen{
+        width: 80%;
+        position: relative;
+        transform: translate(0%, 0%);
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+}
+
 .not-first-title{
-    margin-top: 8%;
+    margin-top: 5%;
+}
+
+#t04{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#t04 th {
+    font-size: 110%;
+    color: rgb(51, 3, 3);
+    font-family: 'Arial';
+    padding: 1%;
+    border-bottom: 1px solid rgb(179, 177, 177);
+}
+
+#t04 td {
+    font-size: 110%;
+    color: rgb(51, 3, 3);
+    font-family: 'Arial';
+    padding: 1%;
+    border-bottom: 1px solid rgb(179, 177, 177);
+}
+
+#t04 td:nth-child(3), #t04 td:nth-child(4){
+    text-indent: 12%;
+}
+
+.one-line-paragraf-small{
+    font-size: 90%;
+    color: rgb(51, 3, 3);
+    font-family: 'Arial';
+    margin-bottom: 8%;
+}
+
+img#university-contact{
+    border-radius: 8px;
+    width: 100%;
+    position: relative;
+    transform: translate(0%,20%);
+}
+
+@media (max-width:1199px){
+    img#university-contact{
+        transform: translate(0%,35%);
+    }
+}
+
+.contact-letter{
+    font-family: 'Arial';
+    color: rgb(51, 3, 3);
+    text-indent: 7%;
+    text-align: justify;
+    font-size: 100%;
+    line-height: 170%;
+}
+
+.first-contact{
+    margin-top: 30%;
+}
+
+@media (max-width:991px){
+    .first-contact{
+        margin-top: 3%;
+    }
+    .one-line-paragraf-small{
+        font-size: 120%;
+        color: rgb(51, 3, 3);
+        font-family: 'Arial';
+        margin-bottom: 2%;
+    }
+    img#university-contact{
+        width: 60%;
+        position: relative;
+        transform: translate(0%, 0%);
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 3%;
+    }
+    .contact-letter{
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 500px){
+    img#university-contact{
+        width: 80%;
+        position: relative;
+        transform: translate(0%, 0%);
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 3%;
+    }
 }
