@@ -5,7 +5,7 @@ menuIcon.addEventListener("click", () => {
     navigacio.classList.toggle("change");
 })
 
-var prevScrollpos = window.pageYOffset;
+/*var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -14,11 +14,13 @@ var currentScrollPos = window.pageYOffset;
     document.getElementById("hamburger").style.top = "-100%";
   }
   prevScrollpos = currentScrollPos;
-}
+}*/
 
 /*function feedback(){
     alert("A kitöltött űrlapot sikeresen elküldtük!");
 }*/
+
+
 
 $(function(){
     var element = document.getElementsByClassName("accordion");
@@ -43,7 +45,11 @@ $(function(){
 });
 
 $(function() {
-    $("#harmonica").accordion({heightStyle: "content"}); 
+    $("#harmonica1").accordion({heightStyle: "content", animate: 200}); 
+});
+
+$(function() {
+    $("#harmonica2").accordion({heightStyle: "content", animate: 200});
 });
 
 /* Form validator functions */
