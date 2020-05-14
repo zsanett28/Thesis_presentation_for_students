@@ -3,7 +3,38 @@ const navigacio = document.querySelector(".navigacio");
 
 menuIcon.addEventListener("click", () => {
     navigacio.classList.toggle("change");
+    if(document.getElementById("navbar").style.top <= "0px"){
+        document.getElementById("navbar").style.top = "-50px";
+    }
+    else{
+        document.getElementById("navbar").style.top = "0px";
+    }
 })
+
+function scrollFunction() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      document.getElementById("navbar").style.top = "0px";
+      document.getElementById("hamburger").setAttribute("style", "top: 0.2%;");
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+      document.getElementById("hamburger").setAttribute("style", "top: 3%;");
+    }
+}
+
+window.onscroll = function() {scrollFunction()};
+
+/*$("#hamburger").click(function () {
+    if($(".navigacio").attr("left","0px")){
+        $(".navigacio").animate({left: '-200px'}, 100)
+    }
+    else{
+
+        if((".navigacio").attr("left","-300px")){
+            $(".navigacio").animate({left: '0px'}, 100)
+        }
+    }
+});*/
+
 
 /*var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {

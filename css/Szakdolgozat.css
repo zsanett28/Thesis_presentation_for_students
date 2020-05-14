@@ -348,6 +348,15 @@ img#seven {
     z-index: 1;
 }
 
+#navbar {
+    background-color: rgb(206, 188, 188);
+    position: fixed;
+    top: -50px;
+    width: 300%;
+    display: block;
+    transition: top 0.3s;
+}
+
 .change {
     left: 0;
 }
