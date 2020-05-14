@@ -28,6 +28,7 @@ body {
     top: 7%;
     left: 16%;
 }
+
 .title {
     font-size: 240%;
     font-family: 'Georgia';
@@ -900,7 +901,7 @@ input#feb, input#jun, input#nap, input#tav{
 }
 
 .dates{
-    margin-top: 5%;
+    margin-top: 0%;
     font-size: 150%;
     font-variant: small-caps;
     color: rgb(119, 8, 8);
@@ -942,8 +943,8 @@ input#feb, input#jun, input#nap, input#tav{
 }
 
 @media (max-width: 450px){
-    .time{
-        font-size: 250%;
+    #countdown-table1, #countdown-table2{
+        font-size: 60%;
     }
 }
 
@@ -1003,7 +1004,7 @@ input#feb, input#jun, input#nap, input#tav{
     transition: 0.5s;
 }
   
-.clock{
+/*.clock{
     width: 85%;
     margin-left: auto;
     margin-right: auto;
@@ -1012,7 +1013,7 @@ input#feb, input#jun, input#nap, input#tav{
     padding: 1%;
     box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 18px 1px;
     border-radius: 10%;
-}
+}*/
 
 img#examen{
     border-radius: 8px;
@@ -1176,4 +1177,126 @@ img#university-contact{
 
 .point{
     font-size: 90%;
+}
+
+#time-runs-out{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid;
+    border-color: transparent;
+    border-radius: 50px 50px;
+}
+
+.container-clock {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.background-clock {
+    position: absolute;
+    top: 10%;
+    right: 12%;
+}
+
+@media (max-width: 1199px){
+    .background-clock {
+        position: absolute;
+        top: 5%;
+        right: 8%;
+    }
+}
+
+@media (max-width: 991px){
+    #time-runs-out{
+        width: 95%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .background-clock {
+        position: absolute;
+        top: 5%;
+        right: 8%;
+    }
+    #countdown-table1, #countdown-table2{
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 725px){
+    .dates{
+        font-size: 130%;
+    }
+    #countdown-table1, #countdown-table2{
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 615px){
+    .background-clock {
+        position: absolute;
+        top: 8%;
+        right: 8%;
+    }
+    .dates{
+        font-size: 120%;
+    }
+    #countdown-table1, #countdown-table2{
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 555px){
+    .background-clock {
+        position: absolute;
+        top: 5%;
+        right: 3%;
+    }
+    .dates{
+        font-size: 120%;
+    }
+    #countdown-table1, #countdown-table2{
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 515px){
+    .background-clock {
+        position: absolute;
+        top: 8%;
+        right: 3%;
+    }
+    .dates{
+        font-size: 90%;
+    }
+    #countdown-table1, #countdown-table2{
+        font-size: 50%;
+    }
+    #timeout1, #timeout2{
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 455px){
+    .background-clock {
+        position: absolute;
+        top: 5%;
+        right: 6%;
+    }
+    .dates{
+        font-size: 90%;
+    }
+    #countdown-table1, #countdown-table2{
+        font-size: 40%;
+    }
+    #timeout1, #timeout2{
+        font-size: 90%;
+    }
+    .datum{
+        font-size: 130%;
+    }
 }

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css\Szakdolgozat.css">
     <script src="js\jquery.min.js"></script>
     <script src="js\Countdown.js"></script>
+    <script src="js\jquery-ui.js"></script>
 </head>
 
 <body>
@@ -90,43 +91,52 @@
             </div>
         </div>
 
-        <div class="row clock">
-            <div class="col-md-6">
-                <p class="paragraf dates center">Februári szesszió</p>
-                <table id="countdown-table1">
-                    <tr class="time">
-                        <td id="fdays" class="time-td"></td>
-                        <td id="fhours" class="time-td"></td>
-                        <td id="fminutes" class="time-td"></td>
-                        <td id="fseconds" class="time-td"></td>
-                    </tr>
-                    <tr class="datum">
-                        <td id="fd"></td>
-                        <td id="fh"></td>
-                        <td id="fm"></td>
-                        <td id="fs"></td>
-                    </tr>
-                    <p id="timeout1" class="option-paragraf center"></p>
-                </table>
+        <div class="row">
+            <div class="container-clock">
+
+                <img id = "time-runs-out" src="images\clock.jpeg" alt="Telik az idő">
+                <div class="background-clock">
+                    <div class="col-md-6">
+                        
+                    </div>
+                    <div class="col-md-12">
+                        <p class="paragraf dates center">Júniusi szesszió</p>
+                        <table id="countdown-table1">
+                            <tr class="time">
+                                <td id="jdays" class="time-td"></td>
+                                <td id="jhours" class="time-td"></td>
+                                <td id="jminutes" class="time-td"></td>
+                                <td id="jseconds" class="time-td"></td>
+                            </tr>
+                            <tr class="datum">
+                                <td id="jd"></td>
+                                <td id="jh"></td>
+                                <td id="jm"></td>
+                                <td id="js"></td>
+                            </tr>
+                            <p id="timeout2" class="option-paragraf center"></p>
+                        </table>
+                        <p class="paragraf dates center">Februári szesszió</p>
+                        <table id="countdown-table2">
+                            <tr class="time">
+                                <td id="fdays" class="time-td"></td>
+                                <td id="fhours" class="time-td"></td>
+                                <td id="fminutes" class="time-td"></td>
+                                <td id="fseconds" class="time-td"></td>
+                            </tr>
+                            <tr class="datum">
+                                <td id="fd"></td>
+                                <td id="fh"></td>
+                                <td id="fm"></td>
+                                <td id="fs"></td>
+                            </tr>
+                            <p id="timeout1" class="option-paragraf center"></p>
+                        </table>
+                    </div>
+                </div>
+        
             </div>
-            <div class="col-md-6">
-                <p class="paragraf dates center">Júniusi szesszió</p>
-                <table id="countdown-table2">
-                    <tr class="time">
-                        <td id="jdays" class="time-td"></td>
-                        <td id="jhours" class="time-td"></td>
-                        <td id="jminutes" class="time-td"></td>
-                        <td id="jseconds" class="time-td"></td>
-                    </tr>
-                    <tr class="datum">
-                        <td id="jd"></td>
-                        <td id="jh"></td>
-                        <td id="jm"></td>
-                        <td id="js"></td>
-                    </tr>
-                    <p id="timeout2" class="option-paragraf center"></p>
-                </table>
-            </div>
+            
         </div>
 
         <div class="row">
