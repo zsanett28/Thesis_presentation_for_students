@@ -994,6 +994,7 @@ input#feb, input#jun, input#nap, input#tav{
     padding: 0.5em;
     position: absolute;
     z-index: 1;
+    display: none;
 }
 
 .panel {
@@ -1314,3 +1315,4 @@ img#university-contact{
     margin-right: 10%;
     padding: 2%;
 }
+

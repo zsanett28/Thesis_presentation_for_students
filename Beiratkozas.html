@@ -86,12 +86,15 @@
                             <div class="form-group col-md-4">
                                 <label>Milyen vizsgára jelentkezel be?</label>
                                 <br>
-                                <label><input type="radio" name="radiobutton1" id="feb" value="Februári szesszió"> Februári szesszió</label>
-                                <label><input type="radio" name="radiobutton1" id="jun" value="Júniusi szesszió"> Júniusi szesszió</label>
+                                <div class="radio-button-group">
+                                    <label><input type="radio" name="radiobutton1" id="feb" value="Februári szesszió"> Februári szesszió</label>
+                                    <label><input type="radio" name="radiobutton1" id="jun" value="Júniusi szesszió"> Júniusi szesszió</label>
+                                </div>
+                                <span class="error"></span>
                             </div>
                             <div class="form-group col-md-4">
                                 <label>Melyik tanévben kezdted az egyetemet?</label>
-                                <select class="form-control" id="dropdown1">
+                                <select class="form-control dropdown" id="dropdown1">
                                     <option value="" selected>Válaszd ki</option>
                                     <option value="2018/2019">2018/2019</option>
                                     <option value="2017/2018">2017/2018</option>
@@ -103,19 +106,23 @@
                                     <option value="2011/2012">2011/2012</option>
                                     <option value="2010/2011">2010/2011</option>
                                 </select>
+                                <span class="error"></span>
                             </div>
                             <div class="form-group col-md-4">
                                 <label>Milyen oktatási formán tanulsz?</label>
                                 <br>
-                                <label><input type="radio" name="radiobutton2" id="nap" value="Nappali oktatás"> Nappali oktatás</label>
-                                <label><input type="radio" name="radiobutton2" id="tav" value="Távoktatás"> Távoktatás</label>
+                                <div class="radio-button-group">
+                                    <label><input type="radio" name="radiobutton2" id="nap" value="Nappali oktatás"> Nappali oktatás</label>
+                                    <label><input type="radio" name="radiobutton2" id="tav" value="Távoktatás"> Távoktatás</label>
+                                </div>
+                                <span class="error"></span>
                             </div>
                         </div>
 
                         <div class="form-row select-group">
                             <div class="form-group col-md-6">
                                 <label>Milyen szakirányon írod a dolgozatod?</label>
-                                <select class="form-control" id="dropdown2">
+                                <select class="form-control dropdown" id="dropdown2">
                                     <option value="" selected>Válaszd ki</option>
                                     <option value="Gazdasági informatika">Gazdasági informatika</option>
                                     <option value="Marketing">Marketing</option>
@@ -123,6 +130,7 @@
                                     <option value="Pénzügy és bank">Pénzügy és bank</option>
                                     <option value="Egyéb">Egyéb</option>
                                 </select>
+                                <span class="error"></span>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Amennyiben az egyéb opciót választottad, írd be a szakirány nevét:</label>
@@ -143,7 +151,7 @@
                         <div class="form-row select-group">
                             <div class="form-group col-md-6">
                                 <label>Témavezető tanár:</label>
-                                <select class="form-control" id="dropdown3">
+                                <select class="form-control dropdown" id="dropdown3">
                                     <option value="" selected>Válaszd ki</option>
                                     <option value="dr. Alt Mónika-Anetta">dr. Alt Mónika-Anetta</option>
                                     <option value="dr. Avornicului Mihai-Constantin">dr. Avornicului Mihai-Constantin</option>
@@ -164,6 +172,7 @@
                                     <option value="drd. Benedek Botond">drd. Benedek Botond</option>
                                     <option value="Más vezető tanár">Más vezető tanár</option>
                                 </select>
+                                <span class="error"></span>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Amennyiben más vezető tanárt jelöltél meg, írd be a nevét:</label>
@@ -184,7 +193,7 @@
                         <div class="form-row select-group">
                             <div class="form-group col-md-6">
                                 <label>Témavezető tanár:</label>
-                                <select class="form-control" id="dropdown4">
+                                <select class="form-control dropdown" id="dropdown4">
                                     <option value="" selected>Válaszd ki</option>
                                     <option value="dr. Alt Mónika-Anetta">dr. Alt Mónika-Anetta</option>
                                     <option value="dr. Avornicului Mihai-Constantin">dr. Avornicului Mihai-Constantin</option>
@@ -205,23 +214,26 @@
                                     <option value="drd. Benedek Botond">drd. Benedek Botond</option>
                                     <option value="Más vezető tanár">Más vezető tanár</option>
                                 </select>
+                                <span class="error"></span>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Amennyiben más vezető tanárt jelöltél meg, írd be a nevét:</label>
                                 <input type="text" class="form-control full-name" disabled>
-                                <span class="error" style="display: none;"></span>
+                                <span class="error"></span>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group checkbox-row col-md-12">
                                 <label><input type="checkbox" name="check" id="check-box"> Beleegyezek, hogy a személyes adataim feldolgozásra kerüljenek!</label>
+                                <br>
+                                <span class="error"></span>
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <button type="submit" class="btn btn-default center-block">Küldés</button>
+                                <button type="submit" name="button" class="btn btn-default center-block">Küldés</button>
                                 <!--onclick="feedback();return false"-->
                             </div>
                         </div>

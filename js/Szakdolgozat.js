@@ -27,8 +27,9 @@ $(function() {
     var height = document.getElementById("background").height;
     $(window).resize(function(){
         height = document.getElementById("background").height;
-      });
+    });
     window.onscroll = function() {scrollFunction(height)};
+    scrollFunction(height);
 });
 
 /*Accordion JQURAY*/
@@ -214,84 +215,89 @@ function checkFullName($input){
     return true;
 }
 
-/*function check_dropdown(){
+function checkDropdown($input){
 
-    var list1 = $("#dropdown1").find(":selected").text();
-    var list2 = $("#dropdown2").find(":selected").text();
-    var list3 = $("#dropdown3").find(":selected").text();
-    var list4 = $("#dropdown4").find(":selected").text();
+    const value =  $input.val();
+    const $error = $input.next(".error");
 
-    if(list1 === "Válaszd ki" || list2 === "Válaszd ki" || list3 === "Válaszd ki" || list4 === "Válaszd ki"){
-        alert("Nincs minden mező kiválasztva/kitöltve!");
-    }else{
-        if(list3 == list4){
-            alert("Ajánlott a két opcióhoz más-más tanárt választani!");
-        }
+    if(value === ""){
+        $error.html("Válassz ki egy opciót!").show();
+        return false;
     }
-
-    var g1 = document.getElementById("dropdown1").value;
-    var g2 = document.getElementById("dropdown2").value;
-    var g3 = document.getElementById("dropdown3").value;
-    var g4 = document.getElementById("dropdown4").value;
     
-    if(g1 == "Válaszd ki" || g2 == "Válaszd ki" || g3 == "Válaszd ki" || g4 == "Válaszd ki"){
+    $error.hide();
+    return true;
+}
 
-        alert("Nincs minden mező kiválasztva/kitöltve!");
+function checkLastTwoDropdown(){
 
+    const value1 = $("#dropdown3").val();
+    const value2 = $("#dropdown4").val();
+
+    if(value1 == value2 && value1 != ""){
+        return false;
     }
-    else{
-        if(g3 == g4){
-            alert("Ajánlott a két opcióhoz más-más tanárt választani!");
-        }
-    }
-}*/
+    return true;
+}
 
-/*Form validation JQUARY*/
+function checkRadioButton($buttonGroup) {
+    const $selectedInput = $buttonGroup.find("input:checked:first")[0];
+    const $error = $buttonGroup.next(".error");
+
+    if($selectedInput === undefined){
+        $error.html("Válassz ki egy opciót!").show();
+        return false;
+    }
+
+    $error.hide();
+    return true;
+}
+
+function checkCheckBox(){
+    const $checkbox = $("#form1 #check-box");
+    const $error = $checkbox.parent().next().next(".error");
+
+    if($checkbox.is(":not(:checked)")){
+        $error.html("Kérjük fogadd el!").show();
+        return false;
+    }
+
+    $error.hide();
+    return true;
+}
+
+/*Form validation JQUERY*/
 
 $(function (){
 
-    $(".error").hide();
+    //ha valtozik az ertek, megint leellenzorni, hogy helyes-e
 
     $("#form1 input#matricol").change(function(){
-        if(!check_matricol()){
-            isValid = false;
-        }
+        check_matricol();
     });
 
     $("#form1 input#email").change(function(){
-        if(!check_email()){
-            isValid = false;
-        }
+        check_email();
     });
 
     $("#form1 input#tel").change(function(){
-        if(!check_tel()){
-            isValid = false;
-        }
+        check_tel();
     });
 
     $("#form1 input#egyeb-szakirany").change(function(){
-        if(!check_egyeb_szakirany()){
-            isValid = false;
-        }
+        check_egyeb_szakirany();
     });
 
     $("#form1 input.full-name").change(function (){
-        if(!checkFullName($(this))) {
-            isValid = false;
-        }
+        checkFullName($(this));
     });
 
     $("#form1 input.one-name").change(function (){
-        if(!checkName($(this))) {
-            isValid = false;
-        }
+        checkName($(this));
     });
 
     $("#form1 input.theme-name").change(function (){
-        if(!checkTheme($(this))) {
-            isValid = false;
-        }
+        checkTheme($(this));
     });
 
     $(".select-group select").change(function(e) {
@@ -305,7 +311,21 @@ $(function (){
         }
     })
 
+    $("#form1 select.dropdown").change(function(){
+        checkDropdown($(this));
+    });
+
+    $("#form1 .radio-button-group").click(function(){
+        checkRadioButton($(this));
+    });
+
+    $("#form1 #check-box").click(function(){
+        checkCheckBox();
+    });
+
     $("#form1").on('submit', function(e){
+
+        //document.getElementById("navbar").style.top = "-50px";
 
         var isValid = true;
 
@@ -327,35 +347,45 @@ $(function (){
             }
         });
 
-        $("#form1 input#matricol").each(function(){
-            if(!check_matricol()){
-                isValid = false;
-            }
-        });
+        if(!check_matricol()){
+            isValid = false;
+        }
+
     
-        $("#form1 input#email").each(function(){
-            if(!check_email()){
-                isValid = false;
-            }
-        });
+        if(!check_email()){
+            isValid = false;
+        }
+
+        if(!check_tel()){
+            isValid = false;
+        }
     
-        $("#form1 input#tel").each(function(){
-            if(!check_tel()){
-                isValid = false;
-            }
-        });
-    
-        $("#form1 input#egyeb-szakirany").each(function(){
-            if(!check_egyeb_szakirany()){
+        if(!check_egyeb_szakirany()){
+            isValid = false;
+        }
+
+
+        $("#form1 .dropdown").each(function(){
+            if(!checkDropdown($(this))){
                 isValid = false;
             }
         });
 
-        /*$("form1 #dropdown1").find("option:selected").each(function(){
-            if(!check_dropdown()){
+
+        if(!checkLastTwoDropdown()){
+            isValid = false;
+            alert("Válassz ki két különböző tanárt az opcióknál!");
+        }
+
+        $("#form1 .radio-button-group").each(function(){
+            if(!checkRadioButton($(this))){
                 isValid = false;
             }
-        });*/
+        });
+
+        if(!checkCheckBox()){
+            isValid = false;
+        }
 
         return isValid;
     })
