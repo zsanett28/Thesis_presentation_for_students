@@ -1,3 +1,5 @@
+/*Hamburger menu*/
+
 const menuIcon = document.querySelector("#hamburger");
 const navigacio = document.querySelector(".navigacio");
 
@@ -11,8 +13,8 @@ menuIcon.addEventListener("click", () => {
     }
 })
 
-function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+function scrollFunction(height) {
+    if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
       document.getElementById("navbar").style.top = "0px";
       document.getElementById("hamburger").setAttribute("style", "top: 0.2%;");
     } else {
@@ -21,37 +23,15 @@ function scrollFunction() {
     }
 }
 
-window.onscroll = function() {scrollFunction()};
+$(function() {
+    var height = document.getElementById("background").height;
+    $(window).resize(function(){
+        height = document.getElementById("background").height;
+      });
+    window.onscroll = function() {scrollFunction(height)};
+});
 
-/*$("#hamburger").click(function () {
-    if($(".navigacio").attr("left","0px")){
-        $(".navigacio").animate({left: '-200px'}, 100)
-    }
-    else{
-
-        if((".navigacio").attr("left","-300px")){
-            $(".navigacio").animate({left: '0px'}, 100)
-        }
-    }
-});*/
-
-
-/*var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("hamburger").style.top = "3%";
-  } else {
-    document.getElementById("hamburger").style.top = "-100%";
-  }
-  prevScrollpos = currentScrollPos;
-}*/
-
-/*function feedback(){
-    alert("A kitöltött űrlapot sikeresen elküldtük!");
-}*/
-
-
+/*Accordion JQURAY*/
 
 $(function(){
     var element = document.getElementsByClassName("accordion");
@@ -85,38 +65,6 @@ $(function() {
 
 /* Form validator functions */
 
-/*function check_second_name(){
-
-    const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö \-]*$/i);
-
-    if(pattern.test($("#second-name").val())){
-        $("#second-name-error").hide();
-    }
-    else{
-        $("#second-name-error").html("Helytelen családnév!");
-        $("#second-name-error").show();
-        return false;
-    }
-
-    return true;
-}
-
-function check_first_name(){
-
-    const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö \-]*$/i);
-
-    if(pattern.test($("#first-name").val())){
-        $("#first-name-error").hide();
-    }
-    else{
-        $("#first-name-error").html("Helytelen keresztnév!");
-        $("#first-name-error").show();
-        return false;
-    }
-        
-    return true;
-}*/
-
 function checkName($input){
 
     const value =  $input.val();
@@ -143,8 +91,7 @@ function check_matricol(){
         $("#matricol-error").hide();
     }
     else{
-        $("#matricol-error").html("Helytelen anyakönyvi szám!");
-        $("#matricol-error").show();
+        $("#matricol-error").html("Helytelen anyakönyvi szám!").show();
         return false;
     }  
     return true;  
@@ -188,47 +135,33 @@ function check_tel(){
 }
 
 function check_egyeb_szakirany(){
-    const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö \-]*$/i);
+    const value =  $("#egyeb-szakirany").val();
+    const $error = $("#egyeb-szakirany").next(".error");
 
-    if(pattern.test($("#egyeb-szakirany").val())){
-        $("#egyeb-szakirany-error").hide();
+    if($("#egyeb-szakirany").prop("disabled")) {
+        $error.hide();
+        return true;
     }
-    else{
-        $("#egyeb-szakirany-error").html("Helytelen szakiránynév!");
-        $("#egyeb-szakirany-error").show();
-        //error_egyeb_szakirany = true;
+
+    var input_length = value.length;
+    if(input_length < 5){
+        $error.html("Helytelen szakiránynév!").show();
         return false;
     }
+    else{
+        const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö \-]*$/i);
+
+        if(pattern.test($("#egyeb-szakirany").val())){
+            $("#egyeb-szakirany-error").hide();
+        }
+        else{
+            $("#egyeb-szakirany-error").html("Helytelen szakiránynév!").show();
+            return false;
+        }
+    }
+    
     return true;
 }
-
-/*function check_tema1(){
-    var pattern = new RegExp(/^[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]+[0-9 ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[0-9 ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[0-9 ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[0-9 ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*$/i);
-
-    if(pattern.test($("#tema1").val())){
-        $("#tema1-error").hide();
-    }
-    else{
-        $("#tema1-error").html("Helytelen témanév!");
-        $("#tema1-error").show();
-        return false;
-    }
-    return true;
-}
-
-function check_tema2(){
-    var pattern = new RegExp(/^[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]+[0-9 ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[0-9 ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[0-9 ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[0-9 ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*$/i);
-
-    if(pattern.test($("#tema2").val())){
-        $("#tema2-error").hide();
-    }
-    else{
-        $("#tema2-error").html("Helytelen témanév!");
-        $("#tema2-error").show();
-        return false;
-    }
-    return true;
-}*/
 
 function checkTheme($input){
     const value =  $input.val();
@@ -252,54 +185,6 @@ function checkTheme($input){
     }
     return true;
 }
-
-/*function check_tanar1(){
-
-    var tanar1_length = $("#tanar1").val().length;
-    if(tanar1_length < 5){
-        $("#tanar1-error").html("Helytelen név!");
-        $("#tanar1-error").show();
-        return false;
-    }
-    else{
-        var pattern = new RegExp(/^[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]+[ ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[ ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[ ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[ ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*$/i);
-
-        if(pattern.test($("#tanar1").val())){
-            $("#tanar1-error").hide();
-        }
-        else{
-            $("#tanar1-error").html("Helytelen név!");
-            $("#tanar1-error").show();
-            return false;
-        }
-        
-    }
-    return true;
-}*/
-
-/*function check_tanar2(){
-
-    var tanar2_length = $("#tanar2").val().length;
-    if(tanar2_length < 5){
-        $("#tanar2-error").html("Helytelen név!");
-        $("#tanar2-error").show();
-        return false;
-    }
-    else{
-        var pattern = new RegExp(/^[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]+[ ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[ ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[ ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*[ ]*[-]*[a-záéúőóüöA-ZÁÉÚŐÓÜÖÍ]*$/i);
-
-        if(pattern.test($("#tanar2").val())){
-            $("#tanar2-error").hide();
-        }
-        else{
-            $("#tanar2-error").html("Helytelen név!");
-            $("#tanar2-error").show();
-            return false;
-        }
-        
-    }
-    return true;
-}*/
 
 function checkFullName($input){
     const value =  $input.val();
@@ -329,70 +214,67 @@ function checkFullName($input){
     return true;
 }
 
+/*function check_dropdown(){
+
+    var list1 = $("#dropdown1").find(":selected").text();
+    var list2 = $("#dropdown2").find(":selected").text();
+    var list3 = $("#dropdown3").find(":selected").text();
+    var list4 = $("#dropdown4").find(":selected").text();
+
+    if(list1 === "Válaszd ki" || list2 === "Válaszd ki" || list3 === "Válaszd ki" || list4 === "Válaszd ki"){
+        alert("Nincs minden mező kiválasztva/kitöltve!");
+    }else{
+        if(list3 == list4){
+            alert("Ajánlott a két opcióhoz más-más tanárt választani!");
+        }
+    }
+
+    var g1 = document.getElementById("dropdown1").value;
+    var g2 = document.getElementById("dropdown2").value;
+    var g3 = document.getElementById("dropdown3").value;
+    var g4 = document.getElementById("dropdown4").value;
+    
+    if(g1 == "Válaszd ki" || g2 == "Válaszd ki" || g3 == "Válaszd ki" || g4 == "Válaszd ki"){
+
+        alert("Nincs minden mező kiválasztva/kitöltve!");
+
+    }
+    else{
+        if(g3 == g4){
+            alert("Ajánlott a két opcióhoz más-más tanárt választani!");
+        }
+    }
+}*/
+
+/*Form validation JQUARY*/
+
 $(function (){
-    //$("#second-name-error").hide();
-    //$("#first-name-error").hide();
-    /*$("#matricol-error").hide();
-    $("#email-error").hide();
-    $("#tel-error").hide();
-    $("#egyeb-szakirany-error").hide();
-    $("#tema1-error").hide();
-    $("#tema2-error").hide();*/
+
     $(".error").hide();
-    //$("#tanar1-error").hide();
-    //$("#tanar2-error").hide();
 
-
-    /*var error_second_name = false;
-    var error_first_name = false;
-    var error_matricol = false;
-    var error_email = false;
-    var error_tel = false;
-    var error_egyeb_szakirany = false;
-    var error_tema1 = false;
-    var error_tema2 = false;
-    var error_tanar1 = false;
-    var error_tanar2 = false;*/
-
-    /*$("#second-name").change(function(){
-        check_second_name();
-    });
-
-    $("#first-name").change(function(){
-        check_first_name();
-    });*/
-
-    $("#matricol").change(function(){
+    $("#form1 input#matricol").change(function(){
         if(!check_matricol()){
             isValid = false;
         }
     });
 
-    $("#email").change(function(){
+    $("#form1 input#email").change(function(){
         if(!check_email()){
             isValid = false;
         }
     });
 
-    $("#tel").change(function(){
+    $("#form1 input#tel").change(function(){
         if(!check_tel()){
             isValid = false;
         }
     });
 
-    $("#egyeb-szakirany").change(function(){
+    $("#form1 input#egyeb-szakirany").change(function(){
         if(!check_egyeb_szakirany()){
             isValid = false;
         }
     });
-
-    /*$("#tema1").change(function(){
-        check_tema1();
-    });
-
-    $("#tema2").change(function(){
-        check_tema2();
-    });*/
 
     $("#form1 input.full-name").change(function (){
         if(!checkFullName($(this))) {
@@ -412,14 +294,6 @@ $(function (){
         }
     });
 
-    /*$("#tanar1").focusout(function(){
-        check_tanar1();
-    });
-
-    $("#tanar2").focusout(function(){
-        check_tanar2();
-    });*/
-
     $(".select-group select").change(function(e) {
         const value = $(this).children("option:selected").val();
         const $textInput = $(this).parent().next().find("input[type=text]");
@@ -428,7 +302,6 @@ $(function (){
             $textInput.prop("disabled", false);
         } else {
             $textInput.prop("disabled", true);
-            //checkFullName($textInput);
         }
     })
 
@@ -454,29 +327,35 @@ $(function (){
             }
         });
 
-        $("#matricol").change(function(){
+        $("#form1 input#matricol").each(function(){
             if(!check_matricol()){
                 isValid = false;
             }
         });
     
-        $("#email").change(function(){
+        $("#form1 input#email").each(function(){
             if(!check_email()){
                 isValid = false;
             }
         });
     
-        $("#tel").change(function(){
+        $("#form1 input#tel").each(function(){
             if(!check_tel()){
                 isValid = false;
             }
         });
     
-        $("#egyeb-szakirany").change(function(){
+        $("#form1 input#egyeb-szakirany").each(function(){
             if(!check_egyeb_szakirany()){
                 isValid = false;
             }
         });
+
+        /*$("form1 #dropdown1").find("option:selected").each(function(){
+            if(!check_dropdown()){
+                isValid = false;
+            }
+        });*/
 
         return isValid;
     })

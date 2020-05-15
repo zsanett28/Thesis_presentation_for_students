@@ -1,3 +1,5 @@
+/*Countdowner*/
+
 var dfebr = new Date("Febr 11, 2020 23:59:59").getTime();
 
 var f = setInterval(function () {

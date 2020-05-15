@@ -19,7 +19,7 @@ body {
     position: relative;
 }
 
-.background {
+#background {
     width: 100%;
 }
 
@@ -349,7 +349,7 @@ img#seven {
 }
 
 #navbar {
-    background-color: rgb(206, 188, 188);
+    background-color: rgb(205, 195, 185);
     position: fixed;
     top: -50px;
     width: 300%;
@@ -1027,13 +1027,13 @@ img#examen{
     border-radius: 8px;
     width: 70%;
     position: relative;
-    transform: translate(30%,45%);
+    transform: translate(30%,35%);
 }
 
 @media (max-width: 1199px){
     img#examen{
         width: 80%;
-        transform: translate(25%,50%);
+        transform: translate(25%,40%);
     }
 }
 
@@ -1312,4 +1312,5 @@ img#university-contact{
 .answer{
     margin-left: 10%;
     margin-right: 10%;
+    padding: 2%;
 }

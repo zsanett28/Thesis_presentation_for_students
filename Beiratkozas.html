@@ -21,7 +21,7 @@
 
         <a href="http://hu.econ.ubbcluj.ro/" target="_blank"><img class="fsega-logo" alt="FSEGA logo" src="images\fsega.png"></a>
         <a href="https://www.ubbcluj.ro/hu/" target="_blank"><img class="bbte-logo" alt="BBTE logo" src="images\bbte.png"></a>
-        <img class="background" alt="Háttérkép" src="images\ballagas.jpg">
+        <img id="background" alt="Háttérkép" src="images\ballagas.jpg">
         <div class="background-text">
             <div class="col-md-12">
                 <h1 class="title">Téma és tanár választás</h1>
@@ -91,17 +91,17 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label>Melyik tanévben kezdted az egyetemet?</label>
-                                <select class="form-control" id="drop-down1">
-                                    <option selected>Válaszd ki</option>
-                                    <option>2018/2019</option>
-                                    <option>2017/2018</option>
-                                    <option>2016/2017</option>
-                                    <option>2015/2016</option>
-                                    <option>2014/2015</option>
-                                    <option>2013/2014</option>
-                                    <option>2012/2013</option>
-                                    <option>2011/2012</option>
-                                    <option>2010/2011</option>
+                                <select class="form-control" id="dropdown1">
+                                    <option value="" selected>Válaszd ki</option>
+                                    <option value="2018/2019">2018/2019</option>
+                                    <option value="2017/2018">2017/2018</option>
+                                    <option value="2016/2017">2016/2017</option>
+                                    <option value="2015/2016">2015/2016</option>
+                                    <option value="2014/2015">2014/2015</option>
+                                    <option value="2013/2014">2013/2014</option>
+                                    <option value="2012/2013">2012/2013</option>
+                                    <option value="2011/2012">2011/2012</option>
+                                    <option value="2010/2011">2010/2011</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
@@ -115,13 +115,13 @@
                         <div class="form-row select-group">
                             <div class="form-group col-md-6">
                                 <label>Milyen szakirányon írod a dolgozatod?</label>
-                                <select class="form-control" id="drop-down2">
-                                    <option selected>Válaszd ki</option>
-                                    <option>Gazdasági informatika</option>
-                                    <option>Marketing</option>
-                                    <option>Menedzsment</option>
-                                    <option>Pénzügy és bank</option>
-                                    <option>Egyéb</option>
+                                <select class="form-control" id="dropdown2">
+                                    <option value="" selected>Válaszd ki</option>
+                                    <option value="Gazdasági informatika">Gazdasági informatika</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Menedzsment">Menedzsment</option>
+                                    <option value="Pénzügy és bank">Pénzügy és bank</option>
+                                    <option value="Egyéb">Egyéb</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
@@ -143,26 +143,26 @@
                         <div class="form-row select-group">
                             <div class="form-group col-md-6">
                                 <label>Témavezető tanár:</label>
-                                <select class="form-control" id="drop-down3">
-                                    <option selected>Válaszd ki</option>
-                                    <option>dr. Alt Mónika-Anetta</option>
-                                    <option>dr. Avornicului Mihai-Constantin</option>
-                                    <option>dr. Cardoș Ildikó-Réka</option>
-                                    <option>dr. Fekete-Pali-Pista Szilveszter</option>
-                                    <option>dr. Györfy Lehel-Zoltán</option>
-                                    <option>dr. Horváth Réka</option>
-                                    <option>dr. Juhász Jácint-Attila</option>
-                                    <option>dr. Kerekes Kinga</option>
-                                    <option>dr. Kovács Gyöngyvér-Emese</option>
-                                    <option>dr. Nagy Bálint-Zsolt</option>
-                                    <option>dr. Rácz Béla-Gergely</option>
-                                    <option>dr. Săplăcan Zsuzsa</option>
-                                    <option>dr. Seer László</option>
-                                    <option>dr. Szabó Tünde Petra</option>
-                                    <option>dr. Szász Levente</option>
-                                    <option>dr. Székely Imre</option>
-                                    <option>drd. Benedek Botond</option>
-                                    <option>Más vezető tanár</option>
+                                <select class="form-control" id="dropdown3">
+                                    <option value="" selected>Válaszd ki</option>
+                                    <option value="dr. Alt Mónika-Anetta">dr. Alt Mónika-Anetta</option>
+                                    <option value="dr. Avornicului Mihai-Constantin">dr. Avornicului Mihai-Constantin</option>
+                                    <option value="dr. Cardoș Ildikó-Réka">dr. Cardoș Ildikó-Réka</option>
+                                    <option value="dr. Fekete-Pali-Pista Szilveszter">dr. Fekete-Pali-Pista Szilveszter</option>
+                                    <option value="dr. Györfy Lehel-Zoltán">dr. Györfy Lehel-Zoltán</option>
+                                    <option value="dr. Horváth Réka">dr. Horváth Réka</option>
+                                    <option value="dr. Juhász Jácint-Attila">dr. Juhász Jácint-Attila</option>
+                                    <option value="dr. Kerekes Kinga">dr. Kerekes Kinga</option>
+                                    <option value="dr. Kovács Gyöngyvér-Emese">dr. Kovács Gyöngyvér-Emese</option>
+                                    <option value="dr. Nagy Bálint-Zsolt">dr. Nagy Bálint-Zsolt</option>
+                                    <option value="dr. Rácz Béla-Gergely">dr. Rácz Béla-Gergely</option>
+                                    <option value="dr. Săplăcan Zsuzsa">dr. Săplăcan Zsuzsa</option>
+                                    <option value="dr. Seer László">dr. Seer László</option>
+                                    <option value="dr. Szabó Tünde Petra">dr. Szabó Tünde Petra</option>
+                                    <option value="dr. Szász Levente">dr. Szász Levente</option>
+                                    <option value="dr. Székely Imre">dr. Székely Imre</option>
+                                    <option value="drd. Benedek Botond">drd. Benedek Botond</option>
+                                    <option value="Más vezető tanár">Más vezető tanár</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
@@ -184,26 +184,26 @@
                         <div class="form-row select-group">
                             <div class="form-group col-md-6">
                                 <label>Témavezető tanár:</label>
-                                <select class="form-control" id="drop-down4">
-                                    <option selected>Válaszd ki</option>
-                                    <option>dr. Alt Mónika-Anetta</option>
-                                    <option>dr. Avornicului Mihai-Constantin</option>
-                                    <option>dr. Cardoș Ildikó-Réka</option>
-                                    <option>dr. Fekete-Pali-Pista Szilveszter</option>
-                                    <option>dr. Györfy Lehel-Zoltán</option>
-                                    <option>dr. Horváth Réka</option>
-                                    <option>dr. Juhász Jácint-Attila</option>
-                                    <option>dr. Kerekes Kinga</option>
-                                    <option>dr. Kovács Gyöngyvér-Emese</option>
-                                    <option>dr. Nagy Bálint-Zsolt</option>
-                                    <option>dr. Rácz Béla-Gergely</option>
-                                    <option>dr. Săplăcan Zsuzsa</option>
-                                    <option>dr. Seer László</option>
-                                    <option>dr. Szabó Tünde Petra</option>
-                                    <option>dr. Szász Levente</option>
-                                    <option>dr. Székely Imre</option>
-                                    <option>drd. Benedek Botond</option>
-                                    <option>Más vezető tanár</option>
+                                <select class="form-control" id="dropdown4">
+                                    <option value="" selected>Válaszd ki</option>
+                                    <option value="dr. Alt Mónika-Anetta">dr. Alt Mónika-Anetta</option>
+                                    <option value="dr. Avornicului Mihai-Constantin">dr. Avornicului Mihai-Constantin</option>
+                                    <option value="dr. Cardoș Ildikó-Réka">dr. Cardoș Ildikó-Réka</option>
+                                    <option value="dr. Fekete-Pali-Pista Szilveszter">dr. Fekete-Pali-Pista Szilveszter</option>
+                                    <option value="dr. Györfy Lehel-Zoltán">dr. Györfy Lehel-Zoltán</option>
+                                    <option value="dr. Horváth Réka">dr. Horváth Réka</option>
+                                    <option value="dr. Juhász Jácint-Attila">dr. Juhász Jácint-Attila</option>
+                                    <option value="dr. Kerekes Kinga">dr. Kerekes Kinga</option>
+                                    <option value="dr. Kovács Gyöngyvér-Emese">dr. Kovács Gyöngyvér-Emese</option>
+                                    <option value="dr. Nagy Bálint-Zsolt">dr. Nagy Bálint-Zsolt</option>
+                                    <option value="dr. Rácz Béla-Gergely">dr. Rácz Béla-Gergely</option>
+                                    <option value="dr. Săplăcan Zsuzsa">dr. Săplăcan Zsuzsa</option>
+                                    <option value="dr. Seer László">dr. Seer László</option>
+                                    <option value="dr. Szabó Tünde Petra">dr. Szabó Tünde Petra</option>
+                                    <option value="dr. Szász Levente">dr. Szász Levente</option>
+                                    <option value="dr. Székely Imre">dr. Székely Imre</option>
+                                    <option value="drd. Benedek Botond">drd. Benedek Botond</option>
+                                    <option value="Más vezető tanár">Más vezető tanár</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
