@@ -349,7 +349,7 @@ img#seven {
 }
 
 #navbar {
-    background-color: rgb(205, 195, 185);
+    background-color: rgb(206, 189, 189);
     position: fixed;
     top: -50px;
     width: 300%;
@@ -995,6 +995,15 @@ input#feb, input#jun, input#nap, input#tav{
     position: absolute;
     z-index: 1;
     display: none;
+}
+
+
+.error-checkbox{
+    background-color: rgba(206,189,189);
+    border-radius: 0px 10px 10px 10px;
+    border: solid thin rgb(119, 8, 8);
+    font-size: 120%;
+    color: rgb(119, 8, 8);
 }
 
 .panel {

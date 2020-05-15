@@ -32,7 +32,7 @@ $(function() {
     scrollFunction(height);
 });
 
-/*Accordion JQURAY*/
+/*Accordion JQUERY*/
 
 $(function(){
     var element = document.getElementsByClassName("accordion");
@@ -325,7 +325,7 @@ $(function (){
 
     $("#form1").on('submit', function(e){
 
-        //document.getElementById("navbar").style.top = "-50px";
+        //leellenorizzuk, hogy helyesek-e az beirt adatok
 
         var isValid = true;
 
@@ -391,108 +391,3 @@ $(function (){
     })
 
 });
-
-
-/*$(function() {
-    $("#form1").on('submit', function(e){    
-        var isValid = true;
-
-        $("#form1 input.full-name").each(function (){
-            if(!checkFullName($(this))) {
-                isValid = false;
-            }
-        });
-
-        return isValid;
-    })
-
-    $("#form1 input.full-name").change(function (){
-        if(!checkFullName($(this))) {
-            isValid = false;
-        }
-    });
-})*/
-
-/*$(function() {
-    $(".select-group select").change(function(e) {
-        const value = $(this).children("option:selected").val();
-        const $textInput = $(this).parent().next().find("input[type=text]");
-
-        if(value === "Más vezető tanár" || value === "Egyéb") {
-            $textInput.prop("disabled", false);
-        } else {
-            $textInput.prop("disabled", true);
-            //checkFullName($textInput);
-        }
-    })
-})*/
-
-    /*var r1 = $("input[name=radiobutton1]:checked").length;
-    var r2 = $("input[name=radiobutton2]:checked").length;
-    var check = $("input[name=check]:checked").length;
-
-    if(r1 < 1){
-        alert("Jelöld meg, melyik vizsgára jelentkezel!");
-    }
-    if(r2 < 1){
-        alert("Jelöld meg, milyen oktatási formán tanulsz!");
-    }
-    if(check < 1){
-        alert("Fogadd el a beleegyezési feltételeket!");
-    }*/
-
-
-/*function feedback(){
-
-    var g1 = document.getElementById("drop-down1").value;
-    var g2 = document.getElementById("drop-down2").value;
-    var g3 = document.getElementById("drop-down3").value;
-    var g4 = document.getElementById("drop-down4").value;
-    
-    if(g1 == "Válaszd ki" || g2 == "Válaszd ki" || g3 == "Válaszd ki" || g4 == "Válaszd ki"){
-
-        alert("Nincs minden mező kiválasztva/kitöltve!");
-
-    }
-    else{
-        if(g3 == g4){
-            alert("Ajánlott a két opcióhoz más-más tanárt választani!");
-        }
-    }
-
-    $("#form1").submit(function (){
-
-        error_second_name = false;
-        error_first_name = false;
-        error_matricol = false;
-        error_email = false;
-        error_tel = false;
-        error_egyeb_szakirany = false;
-        error_tema1 = false;
-        error_tema2 = false;
-        error_tanar1 = false;
-        error_tanar2 = false;
-    
-        check_second_name();
-        check_first_name();
-        check_matricol();
-        check_email();
-        check_tel();
-        check_egyeb_szakirany();
-        check_tema1();
-        check_tema2();
-        check_tanar1();
-        check_tanar2();
-    
-        if(error_second_name == false && error_first_name == false && error_matricol == false && error_email == false && error_tel == false && error_egyeb_szakirany == false && error_tema1 == false && error_tema2 == false && error_tanar1 == false && error_tanar2 == false){
-            alert("Az űrlap sikeresen elküldve!");
-            return true;
-        }
-        else{
-            alert("Az űrlap nem került elküldésre! Tartalmaz helyetelenül vagy egyáltalán nem kitöltött mezőket!");
-            return false;
-        }
-    
-    });
-
-}*/

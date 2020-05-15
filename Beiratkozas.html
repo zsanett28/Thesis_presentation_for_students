@@ -135,7 +135,7 @@
                             <div class="form-group col-md-6">
                                 <label>Amennyiben az egyéb opciót választottad, írd be a szakirány nevét:</label>
                                 <input type="text" class="form-control" id="egyeb-szakirany" disabled>
-                                <span class="error" id="egyeb-szakirany-error" style="display: none;"></span>
+                                <span class="error" id="egyeb-szakirany-error"></span>
                             </div>
                         </div>
 
@@ -177,7 +177,7 @@
                             <div class="form-group col-md-6">
                                 <label>Amennyiben más vezető tanárt jelöltél meg, írd be a nevét:</label>
                                 <input type="text" class="form-control full-name" disabled>
-                                <span class="error" style="display: none;"></span>
+                                <span class="error"></span>
                             </div>
                         </div>
 
@@ -225,16 +225,15 @@
 
                         <div class="form-row">
                             <div class="form-group checkbox-row col-md-12">
-                                <label><input type="checkbox" name="check" id="check-box"> Beleegyezek, hogy a személyes adataim feldolgozásra kerüljenek!</label>
+                                <label><input type="checkbox" name="check" id="check-box"> Elfogadom, hogy a személyes adataim feldolgozásra kerüljenek!</label>
                                 <br>
-                                <span class="error"></span>
+                                <span class="error error-checkbox"></span>
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <button type="submit" name="button" class="btn btn-default center-block">Küldés</button>
-                                <!--onclick="feedback();return false"-->
                             </div>
                         </div>
 
