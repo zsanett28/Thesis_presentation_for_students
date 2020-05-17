@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <link rel="icon" href="images\icon.png" sizes="16x16" type="image/png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--a szelte az oldalnak annyi legyen mint a device oldala, illetve nem modositja a betuk meretet sem-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css\bootstrap.min.css">
     <link rel="stylesheet" href="css\all.css">
@@ -21,7 +20,7 @@
 
         <a href="http://hu.econ.ubbcluj.ro/" target="_blank"><img class="fsega-logo" alt="FSEGA logo" src="images\fsega.png"></a>
         <a href="https://www.ubbcluj.ro/hu/" target="_blank"><img class="bbte-logo" alt="BBTE logo" src="images\bbte.png"></a>
-        <img id="background" alt="Háttérkép" src="images\ballagas.jpg">
+        <img id="background" alt="Háttérkép" src="images\background.jpg">
         <div class="background-text">
             <div class="col-md-12">
                 <h1 class="title">Téma és tanár választás</h1>
@@ -134,8 +133,8 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Amennyiben az egyéb opciót választottad, írd be a szakirány nevét:</label>
-                                <input type="text" class="form-control" id="egyeb-szakirany" disabled>
-                                <span class="error" id="egyeb-szakirany-error"></span>
+                                <input type="text" class="form-control" id="write-department" disabled>
+                                <span class="error" id="write-department-error"></span>
                             </div>
                         </div>
 
@@ -249,13 +248,13 @@
 
     <div class="container-fluid">
         <div class="menu">
-            <nav class="navigacio">
+            <nav class="navigation">
                 
                 <nav class="navbar navbar-light bg-light" id="navbar">
                     <div id="hamburger">
-                        <div class="sor sor-1"></div>
-                        <div class="sor sor-2"></div>
-                        <div class="sor sor-3"></div>
+                        <div class="slice slice-1"></div>
+                        <div class="slice slice-2"></div>
+                        <div class="slice slice-3"></div>
                     </div>
                 </nav>
             

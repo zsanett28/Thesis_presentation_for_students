@@ -1,17 +1,17 @@
 /*Hamburger menu*/
 
 const menuIcon = document.querySelector("#hamburger");
-const navigacio = document.querySelector(".navigacio");
+const navigation = document.querySelector(".navigation");
 
-menuIcon.addEventListener("click", () => {
-    navigacio.classList.toggle("change");
+menuIcon.addEventListener("click", function() {
+    navigation.classList.toggle("change");
     if(document.getElementById("navbar").style.top <= "0px"){
         document.getElementById("navbar").style.top = "-50px";
     }
     else{
         document.getElementById("navbar").style.top = "0px";
     }
-})
+});
 
 function scrollFunction(height) {
     if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
@@ -24,6 +24,7 @@ function scrollFunction(height) {
 }
 
 $(function() {
+
     var height = document.getElementById("background").height;
     $(window).resize(function(){
         height = document.getElementById("background").height;
@@ -135,11 +136,11 @@ function check_tel(){
     return true;
 }
 
-function check_egyeb_szakirany(){
-    const value =  $("#egyeb-szakirany").val();
-    const $error = $("#egyeb-szakirany").next(".error");
+function check_write_department(){
+    const value =  $("#write-department").val();
+    const $error = $("#write-department").next(".error");
 
-    if($("#egyeb-szakirany").prop("disabled")) {
+    if($("#write-department").prop("disabled")) {
         $error.hide();
         return true;
     }
@@ -152,11 +153,11 @@ function check_egyeb_szakirany(){
     else{
         const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö \-]*$/i);
 
-        if(pattern.test($("#egyeb-szakirany").val())){
-            $("#egyeb-szakirany-error").hide();
+        if(pattern.test($("#write-department").val())){
+            $("#write-department-error").hide();
         }
         else{
-            $("#egyeb-szakirany-error").html("Helytelen szakiránynév!").show();
+            $("#write-department-error").html("Helytelen szakiránynév!").show();
             return false;
         }
     }
@@ -270,8 +271,6 @@ function checkCheckBox(){
 
 $(function (){
 
-    //ha valtozik az ertek, megint leellenzorni, hogy helyes-e
-
     $("#form1 input#matricol").change(function(){
         check_matricol();
     });
@@ -284,8 +283,8 @@ $(function (){
         check_tel();
     });
 
-    $("#form1 input#egyeb-szakirany").change(function(){
-        check_egyeb_szakirany();
+    $("#form1 input#write-department").change(function(){
+        check_write_department();
     });
 
     $("#form1 input.full-name").change(function (){
@@ -325,8 +324,6 @@ $(function (){
 
     $("#form1").on('submit', function(e){
 
-        //leellenorizzuk, hogy helyesek-e az beirt adatok
-
         var isValid = true;
 
         $("#form1 input.full-name").each(function (){
@@ -360,7 +357,7 @@ $(function (){
             isValid = false;
         }
     
-        if(!check_egyeb_szakirany()){
+        if(!check_write_department()){
             isValid = false;
         }
 
