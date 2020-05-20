@@ -673,6 +673,11 @@ img#print{
     color: rgb(51, 3, 3);
 }
 
+.link-bourdon:focus{
+    text-decoration: underline;
+    color: rgb(51, 3, 3);
+}
+
 .link{
     text-decoration: underline;
     color: rgb(5, 54, 110);
