@@ -175,7 +175,7 @@ function checkTheme($input){
         return false;
     }
     else{
-        const pattern = new RegExp(/^[a-záéúőóüö0-9]+[ ]*[-]*[a-záéúőóüö0-9%$& \-]*$/i);
+        const pattern = new RegExp(/^[a-záéúőóüö0-9]+[ ]*[-]*[a-záéúőóüö0-9%$&' \-]*$/i);
 
         if(pattern.test(value)){
             $error.hide();
@@ -235,9 +235,13 @@ function checkLastTwoDropdown(){
     const value1 = $("#dropdown3").val();
     const value2 = $("#dropdown4").val();
 
+    if(value1 === "Más vezető tanár" && value2 === "Más vezető tanár"){
+        return true;
+    }
     if(value1 == value2 && value1 != ""){
         return false;
     }
+    
     return true;
 }
 
