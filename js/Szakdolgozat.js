@@ -245,6 +245,18 @@ function checkLastTwoDropdown(){
     return true;
 }
 
+function checkLastTwoTeacher(){
+
+    const value1 = $("#teacher1").val();
+    const value2 = $("#teacher2").val();
+
+    if(value1 == value2){
+        return false;
+    }
+    
+    return true;
+}
+
 function checkRadioButton($buttonGroup) {
     const $selectedInput = $buttonGroup.find("input:checked:first")[0];
     const $error = $buttonGroup.next(".error");
@@ -374,6 +386,11 @@ $(function (){
 
 
         if(!checkLastTwoDropdown()){
+            isValid = false;
+            alert("Válassz ki két különböző tanárt az opcióknál!");
+        }
+
+        if(!checkLastTwoTeacher()){
             isValid = false;
             alert("Válassz ki két különböző tanárt az opcióknál!");
         }
