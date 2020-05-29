@@ -1092,19 +1092,19 @@ img#exam{
     font-size: 90%;
     color: rgb(51, 3, 3);
     font-family: 'Arial';
-    margin-bottom: 8%;
+    margin-bottom: 2%;
 }
 
 img#university-contact{
     border-radius: 8px;
-    width: 100%;
+    width: 80%;
     position: relative;
-    transform: translate(0%,20%);
+    transform: translate(0%,10%);
 }
 
 @media (max-width:1199px){
     img#university-contact{
-        transform: translate(0%,35%);
+        transform: translate(0%,15%);
     }
 }
 
@@ -1118,18 +1118,30 @@ img#university-contact{
 }
 
 .first-contact{
-    margin-top: 30%;
+    margin-top: 20%;
+}
+
+.form2-title{
+    font-family: "Georgia";
+    font-size: 130%;
+    color: rgb(51, 3, 3);
+    margin-top: 5%;
+    margin-bottom: 3%;
 }
 
 @media (max-width:991px){
     .first-contact{
-        margin-top: 3%;
+        margin-top: 5%;
     }
     .one-line-paragraf-small{
-        font-size: 120%;
+        font-size: 100%;
         color: rgb(51, 3, 3);
         font-family: 'Arial';
         margin-bottom: 2%;
+        text-align: center;
+    }
+    .form2-title{
+        margin-top: 8%;
     }
     img#university-contact{
         width: 60%;

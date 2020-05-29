@@ -99,23 +99,26 @@ function check_matricol(){
     return true;  
 }
 
-function check_email(){
+function check_email($input){
+    const value = $input.val();
+    const email_length = value.length;
+    const $error = $input.next(".error");
 
-    var email_length = $("#email").val().length;
+
     if(email_length < 3){
-        $("#email-error").html("Helytelen e-mail cím!");
-        $("#email-error").show();
+        $error.html("Helytelen e-mail cím!");
+        $error.show();
         return false;
     }
     else{
         const pattern = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-z]{1,3}$/i);
 
-        if(pattern.test($("#email").val())){
-            $("#email-error").hide();
+        if(pattern.test(value)){
+            $error.hide();
         }
         else{
-            $("#email-error").html("Helytelen e-mail cím!");
-            $("#email-error").show();
+            $error.html("Helytelen e-mail cím!");
+            $error.show();
             return false;
         }
     }
@@ -203,7 +206,7 @@ function checkFullName($input){
         return false;
     }
     else{
-        const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö \-]*$/i);
+        const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö .\-]*$/i);
 
         if(pattern.test(value)){
             $error.hide();
@@ -230,27 +233,23 @@ function checkDropdown($input){
     return true;
 }
 
-function checkLastTwoDropdown(){
+function checkTeachers(){
 
-    const value1 = $("#dropdown3").val();
-    const value2 = $("#dropdown4").val();
+    value1 = $("#dropdown3").val();
+    value2 = $("#dropdown4").val();
 
-    if(value1 === "Más vezető tanár" && value2 === "Más vezető tanár"){
-        return true;
+    if(value1 === "Más vezető tanár") {
+        value1 = $("#teacher1").val();
     }
+
+    if(value2 === "Más vezető tanár") {
+        value2 = $("#teacher2").val();
+    }
+
+    console.log(value1);
+    console.log(value2);
+
     if(value1 == value2 && value1 != ""){
-        return false;
-    }
-    
-    return true;
-}
-
-function checkLastTwoTeacher(){
-
-    const value1 = $("#teacher1").val();
-    const value2 = $("#teacher2").val();
-
-    if(value1 == value2){
         return false;
     }
     
@@ -283,6 +282,19 @@ function checkCheckBox(){
     return true;
 }
 
+function checkEmptyInput($input, message){
+    const value =  $input.val();
+    const $error = $input.next(".error");
+
+    if(value === ""){
+        $error.html(message).show();
+        return false;
+    }
+    
+    $error.hide();
+    return true;
+}
+
 /*Form validation JQUERY*/
 
 $(function (){
@@ -291,8 +303,8 @@ $(function (){
         check_matricol();
     });
 
-    $("#form1 input#email").change(function(){
-        check_email();
+    $("input[type=email]").change(function(){
+        check_email($(this));
     });
 
     $("#form1 input#tel").change(function(){
@@ -364,10 +376,11 @@ $(function (){
             isValid = false;
         }
 
-    
-        if(!check_email()){
-            isValid = false;
-        }
+        $("#form1 input[type=email]").each(function (){
+            if(!check_email($(this))) {
+                isValid = false;
+            }
+        });
 
         if(!check_tel()){
             isValid = false;
@@ -385,12 +398,7 @@ $(function (){
         });
 
 
-        if(!checkLastTwoDropdown()){
-            isValid = false;
-            alert("Válassz ki két különböző tanárt az opcióknál!");
-        }
-
-        if(!checkLastTwoTeacher()){
+        if(!checkTeachers()){
             isValid = false;
             alert("Válassz ki két különböző tanárt az opcióknál!");
         }
@@ -403,6 +411,43 @@ $(function (){
 
         if(!checkCheckBox()){
             isValid = false;
+        }
+
+        if(isValid) {
+            var teacher1 = $("#dropdown3").val();
+            if(teacher1 === "Más vezető tanár"){
+                teacher1 = $("#teacher1").val();
+            }
+            var teacher2 = $("#dropdown4").val();
+            if(teacher2 === "Más vezető tanár"){
+                teacher2 = $("#teacher2").val();
+            }
+            alert("Időpont: " + $("input:radio[name='radiobutton1']:checked").val() + "\n1.opció:"+ "\nTéma: " + $(".theme-name:eq(0)").val() + "\nTanár: " + teacher1 + "\n2.opció:" + "\nTéma: "+ $(".theme-name:eq(1)").val() + "\nTanár: " + teacher2);
+        }
+
+        return isValid;
+    })
+
+    $("#kapcsolat-form textarea").change(function() {
+        checkEmptyInput($("#kapcsolat-form textarea"), "Írd meg a kérdésed vagy üzeneteted!");
+    });
+
+    $("#kapcsolat-form").on('submit', function(e){
+
+        var isValid = true;
+
+        $("#kapcsolat-form input[type=email]").each(function (){
+            if(!check_email($(this))) {
+                isValid = false;
+            }
+        });
+
+        if(!checkEmptyInput($("#kapcsolat-form textarea"), "Írd meg a kérdésed vagy üzeneteted!")) {
+            isValid = false;
+        }
+
+        if(isValid) {
+            alert("A választ a(z) " + $("#student-email").val() + " email címre hamarosan elküldjük!");
         }
 
         return isValid;
