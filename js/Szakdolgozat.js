@@ -422,7 +422,9 @@ $(function (){
             if(teacher2 === "Más vezető tanár"){
                 teacher2 = $("#teacher2").val();
             }
-            alert("Időpont: " + $("input:radio[name='radiobutton1']:checked").val() + "\n1.opció:"+ "\nTéma: " + $(".theme-name:eq(0)").val() + "\nTanár: " + teacher1 + "\n2.opció:" + "\nTéma: "+ $(".theme-name:eq(1)").val() + "\nTanár: " + teacher2);
+            if(!confirm("Időpont: " + $("input:radio[name='radiobutton1']:checked").val() + "\n1.opció:"+ "\nTéma: " + $(".theme-name:eq(0)").val() + "\nTanár: " + teacher1 + "\n2.opció:" + "\nTéma: "+ $(".theme-name:eq(1)").val() + "\nTanár: " + teacher2)){
+                isValid = false;
+            }
         }
 
         return isValid;
