@@ -65,394 +65,363 @@ $(function() {
     $("#harmonica2").accordion({heightStyle: "content", animate: 200});
 });
 
-/* Form validator functions */
 
-function checkName($input){
+/*Form validation functions*/
 
-    const value =  $input.val();
-    const $error = $input.next(".error");
-
-    const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö \-]*$/i);
-
-    if(pattern.test(value)){
-        $error.hide();
-    }
-    else{
-        $error.html("Helytelen név!").show();
+//returns true if the input is valid for file "kutatasi terv", else return false
+function validDataKutatasi(input) {
+    if (input.files.length == 0) {
         return false;
     }
-    
-    return true;
-}
 
-function check_matricol(){
-
-    const pattern = new RegExp(/^[0-9]{4}$/i);
-
-    if(pattern.test($("#matricol").val())){
-        $("#matricol-error").hide();
-    }
-    else{
-        $("#matricol-error").html("Helytelen anyakönyvi szám!").show();
-        return false;
-    }  
-    return true;  
-}
-
-function check_email($input){
-    const value = $input.val();
-    const email_length = value.length;
-    const $error = $input.next(".error");
-
-
-    if(email_length < 3){
-        $error.html("Helytelen e-mail cím!");
-        $error.show();
+    var size = input.files[0].size;
+    if (size > 600000) { 
         return false;
     }
-    else{
-        const pattern = new RegExp(/^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-z]{1,3}$/i);
 
-        if(pattern.test(value)){
-            $error.hide();
-        }
-        else{
-            $error.html("Helytelen e-mail cím!");
-            $error.show();
-            return false;
-        }
-    }
-    return true;
-}
-
-function check_tel(){
-    const pattern = new RegExp(/^[0-9]{10,15}$/i);
-
-    if(pattern.test($("#tel").val())){
-        $("#tel-error").hide();
-    }
-    else{
-        $("#tel-error").html("Helytelen telefonszám!");
-        $("#tel-error").show();
+    var res = input.files[0].name.split(".").pop();
+    if(res != "pdf") {
         return false;
     }
-    return true;
+
+    return true;   
 }
 
-function check_write_department(){
-    const value =  $("#write-department").val();
-    const $error = $("#write-department").next(".error");
+//returns true if the input is valid for file "szakdolgozat", else return false
+function validDataSzakdolgozat(input) {
+    if (input.files.length == 0) {
+        return false;
+    }
 
-    if($("#write-department").prop("disabled")) {
-        $error.hide();
+    var size = input.files[0].size;
+    if (size > 5000000) { 
+        return false;
+    }
+
+    var res = input.files[0].name.split(".").pop();
+    if(res != "pdf") {
+        return false;
+    } 
+
+    return true;   
+}
+
+//check if the input is valid for file "kutatasi terv" 
+//if it is valid returns true
+//else returns false
+function checkKutatasiterv() {
+    var input = document.getElementById("kutTerv");
+    console.log(input);
+    if (!validDataKutatasi(input)) {
+        document.getElementById("error1").style.display = "unset";
+        document.getElementById("error1").innerHTML = "Helytelen kiterjesztés vagy méret!";
+        return false;
+    } else {
+        alert("Sikeresen feltöltöttük a kutatási terved új változatát!\nFigyelem! Az állomány neve a követelményeknek megfelelően módosult!");
         return true;
     }
-
-    var input_length = value.length;
-    if(input_length < 5){
-        $error.html("Helytelen szakiránynév!").show();
-        return false;
-    }
-    else{
-        const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö \-]*$/i);
-
-        if(pattern.test($("#write-department").val())){
-            $("#write-department-error").hide();
-        }
-        else{
-            $("#write-department-error").html("Helytelen szakiránynév!").show();
-            return false;
-        }
-    }
-    
-    return true;
 }
 
-function checkTheme($input){
-    const value =  $input.val();
-    const $error = $input.next(".error");
-
-    var input_length = value.length;
-    if(input_length < 5){
-        $error.html("Helytelen témanév!").show();
-        return false;
-    }
-    else{
-        const pattern = new RegExp(/^[a-záéúőóüö0-9]+[ ]*[-]*[a-záéúőóüö0-9%$&' \-]*$/i);
-
-        if(pattern.test(value)){
-            $error.hide();
-        }
-        else{
-            $error.html("Helytelen témanév!").show();
-            return false;
-        }
-    }
-    return true;
+//disappearance of the error message for file "kutatasi terv"
+function changeFileKutatasi() {
+    document.getElementById("error1").style.display = "none";
 }
 
-function checkFullName($input){
-    const value =  $input.val();
-    const $error = $input.next(".error");
-
-    if($input.prop("disabled")) {
-        $error.hide();
+//check if the input is valid for file "szakdolgozat"
+//if it is valid returns true
+//else returns false
+function checkSzakdolgozat() {
+    var input = document.getElementById("szakdolg");
+    if (!validDataSzakdolgozat(input)) {
+        document.getElementById("error2").style.display = "unset";
+        document.getElementById("error2").innerHTML = "Helytelen kiterjesztés vagy méret!";
+        return false;
+    } else {
+        alert("Sikeresen feltöltöttük a szakdolgozatod új változatát!\nFigyelem! Az állomány neve a követelményeknek megfelelően módosult!");
         return true;
     }
+}
 
-    var input_length = value.length;
-    if(input_length < 5){
-        $error.html("Helytelen név!").show();
-        return false;
+//disappearance of the error message for file "szakdolgozat"
+function changeFileSzakdolgozat() {
+    document.getElementById("error2").style.display = "none";
+}
+
+//disappearance or appearance of error message if the the check box is checked or not
+function changeCheckBox() {
+    var value = document.getElementById("check-box").checked;
+    if (value) {
+        document.getElementById("error-checkbox").style.display = "none";
+    } else {
+        document.getElementById("error-checkbox").style.display = "unset";
+        document.getElementById("error-checkbox").innerHTML = "Kérjük fogadd el!";
     }
-    else{
-        const pattern = new RegExp(/^[a-záéúőóüö]+[ ]*[-]*[a-záéúőóüö .\-]*$/i);
+}
 
-        if(pattern.test(value)){
-            $error.hide();
-        }
-        else{
-            $error.html("Helytelen név!").show();
-            return false;
-        }
+//check if the check box is checked
+function checkCheckBox() {
+    if(!document.getElementById("check-box").checked) {
+        return false;
     }
     return true;
 }
 
-function checkDropdown($input){
+//disappearance or appearance of error message depending on the selected value from dropdown list
+function changeDropDown() {
+    var e = document.getElementById("dropdown-temak");
+    var value = e.options[e.selectedIndex].value;
+    if (value == "") {
+        document.getElementById("error-drop2").style.display = "unset";
+        document.getElementById("error-drop2").innerHTML = "Válassz ki egy témát!";
+    } else {
+        document.getElementById("error-drop2").style.display = "none";
+    }
+}
 
-    const value =  $input.val();
-    const $error = $input.next(".error");
-
-    if(value === ""){
-        $error.html("Válassz ki egy opciót!").show();
+//check if an option is selected from dropdown list
+function checkDropDown() {
+    var e = document.getElementById("dropdown-temak");
+    var res = e.options[e.selectedIndex].value;
+    if (res == "") {
         return false;
     }
-    
-    $error.hide();
     return true;
 }
 
-function checkTeachers(){
-
-    value1 = $("#dropdown3").val();
-    value2 = $("#dropdown4").val();
-
-    if(value1 === "Más vezető tanár") {
-        value1 = $("#teacher1").val();
-    }
-
-    if(value2 === "Más vezető tanár") {
-        value2 = $("#teacher2").val();
-    }
-
-    console.log(value1);
-    console.log(value2);
-
-    if(value1 == value2 && value1 != ""){
-        return false;
-    }
-    
-    return true;
-}
-
-function checkRadioButton($buttonGroup) {
-    const $selectedInput = $buttonGroup.find("input:checked:first")[0];
-    const $error = $buttonGroup.next(".error");
-
-    if($selectedInput === undefined){
-        $error.html("Válassz ki egy opciót!").show();
+//check if the form could be sent
+function checkBeiratkozasForm() {
+    if (!checkDropDown()) {
+        document.getElementById("error-drop2").style.display = "unset";
+        document.getElementById("error-drop2").innerHTML = "Válassz ki egy témát!";
         return false;
     }
 
-    $error.hide();
-    return true;
-}
-
-function checkCheckBox(){
-    const $checkbox = $("#form1 #check-box");
-    const $error = $checkbox.parent().next().next(".error");
-
-    if($checkbox.is(":not(:checked)")){
-        $error.html("Kérjük fogadd el!").show();
+    if (!checkCheckBox()) {
+        document.getElementById("error-checkbox").style.display = "unset";
+        document.getElementById("error-checkbox").innerHTML = "Kérjük fogadd el!";
         return false;
     }
 
-    $error.hide();
+    alert("Sikeresen beiratkoztál a szakdolgozat elkészítésére!");
     return true;
 }
 
-function checkEmptyInput($input, message){
-    const value =  $input.val();
-    const $error = $input.next(".error");
+//disappearance or appearance of error message depending on value of the input
+function changeEmail() {
+    var input = document.getElementById("email").value;
+    if (input == "") {
+        document.getElementById("email-error").style.display = "unset";
+        document.getElementById("email-error").innerHTML = "Írd be az email címed!";
+    } else {
+        document.getElementById("email-error").style.display = "none";
+    }
+}
 
-    if(value === ""){
-        $error.html(message).show();
+//disappearance or appearance of error message depending on value of the input
+function changeSubject() {
+    var input = document.getElementById("subject").value;
+    if (input == "") {
+        document.getElementById("subject-error").style.display = "unset";
+        document.getElementById("subject-error").innerHTML = "Írd be az üzenet tárgyát!";
+    } else {
+        document.getElementById("subject-error").style.display = "none";
+    }
+}
+
+//disappearance or appearance of error message depending on value of the input
+function changeMessage() {
+    var input = document.getElementById("message").value;
+    if (input == "") {
+        document.getElementById("message-error").style.display = "unset";
+        document.getElementById("message-error").innerHTML = "Írd be az üzenetet!";
+    } else {
+        document.getElementById("message-error").style.display = "none";
+    }
+}
+
+function checkEmail() {
+    var input = document.getElementById("email").value;
+    if (input == "") {
         return false;
     }
-    
-    $error.hide();
     return true;
 }
 
-/*Form validation JQUERY*/
+function checkSubject() {
+    var input = document.getElementById("subject").value;
+    if (input == "") {
+        return false;
+    }
+    return true;
+}
 
-$(function (){
+function checkMessage() {
+    var input = document.getElementById("message").value;
+    if (input == "") {
+        return false;
+    }
+    return true;
+}
 
-    $("#form1 input#matricol").change(function(){
-        check_matricol();
-    });
+//check if the form could be sent
+function checkKapcsolatForm() {
+    if (!checkEmail()) {
+        document.getElementById("email-error").style.display = "unset";
+        document.getElementById("email-error").innerHTML = "Írd be az email címed!";
+        return false;
+    }
 
-    $("input[type=email]").change(function(){
-        check_email($(this));
-    });
+    if (!checkSubject()) {
+        document.getElementById("subject-error").style.display = "unset";
+        document.getElementById("subject-error").innerHTML = "Írd be az üzenet tárgyát!";
+        return false;
+    }
 
-    $("#form1 input#tel").change(function(){
-        check_tel();
-    });
+    if (!checkMessage()) {
+        document.getElementById("message-error").style.display = "unset";
+        document.getElementById("message-error").innerHTML = "Írd be az üzenetet!";
+        return false;
+    }
 
-    $("#form1 input#write-department").change(function(){
-        check_write_department();
-    });
+    alert("Sikeresen elküldtük a leveled!");
+    return true;
+}
 
-    $("#form1 input.full-name").change(function (){
-        checkFullName($(this));
-    });
+//disappearance or appearance of error message depending on the selected value from dropdown list
+function changeDropDownDiak() {
+    var e = document.getElementById("dropdown-diak-jegy");
+    var value = e.options[e.selectedIndex].value;
+    if (value == "") {
+        document.getElementById("error-drop3").style.display = "unset";
+        document.getElementById("error-drop3").innerHTML = "Válassz ki egy diákot!";
+    } else {
+        document.getElementById("error-drop3").style.display = "none";
+    }
+}
 
-    $("#form1 input.one-name").change(function (){
-        checkName($(this));
-    });
+//check if an option is selected from dropdown list
+function checkDropDownDiak() {
+    var e = document.getElementById("dropdown-diak-jegy");
+    var res = e.options[e.selectedIndex].value;
+    if (res == "") {
+        return false;
+    }
+    return true;
+}
 
-    $("#form1 input.theme-name").change(function (){
-        checkTheme($(this));
-    });
+function changeJegyKut() {
+    var input = document.getElementById("kut-jegy").value;
+    if (input == "") {
+        document.getElementById("jegy-error").style.display = "unset";
+        document.getElementById("jegy-error").innerHTML = "Add meg a jegyet!";
+    } else {
+        document.getElementById("jegy-error").style.display = "none";
+    }
+}
 
-    $(".select-group select").change(function(e) {
-        const value = $(this).children("option:selected").val();
-        const $textInput = $(this).parent().next().find("input[type=text]");
+function checkJegyKut() {
+    var value = document.getElementById("kut-jegy").value;
+    if (value == "") {
+        return false;
+    }
+    return true;
+}
 
-        if(value === "Más vezető tanár" || value === "Egyéb") {
-            $textInput.prop("disabled", false);
-        } else {
-            $textInput.prop("disabled", true);
-        }
-    })
+//check if the form could be sent
+function checkJegyadasKut() {
+    if (!checkDropDownDiak()) {
+        document.getElementById("error-drop3").style.display = "unset";
+        document.getElementById("error-drop3").innerHTML = "Válassz ki egy diákot!";
+        return false;
+    }
+    if (!checkJegyKut()) {
+        document.getElementById("jegy-error").style.display = "unset";
+        document.getElementById("jegy-error").innerHTML = "Add meg a jegyet!";
+        return false;
+    }
+    return true;
+}
 
-    $("#form1 select.dropdown").change(function(){
-        checkDropdown($(this));
-    });
+//disappearance or appearance of error message depending on the selected value from dropdown list
+function changeDropDownDiak2() {
+    var e = document.getElementById("dropdown-diak-szakjegy");
+    var value = e.options[e.selectedIndex].value;
+    if (value == "") {
+        document.getElementById("error-drop4").style.display = "unset";
+        document.getElementById("error-drop4").innerHTML = "Válassz ki egy diákot!";
+    } else {
+        document.getElementById("error-drop4").style.display = "none";
+    }
+}
 
-    $("#form1 .radio-button-group").click(function(){
-        checkRadioButton($(this));
-    });
+function changeJegySzak() {
+    var input = document.getElementById("szak-jegy").value;
+    if (input == "") {
+        document.getElementById("szak-jegy-error").style.display = "unset";
+        document.getElementById("szak-jegy-error").innerHTML = "Add meg a jegyet!";
+    } else {
+        document.getElementById("szak-jegy-error").style.display = "none";
+    }
+}
 
-    $("#form1 #check-box").click(function(){
-        checkCheckBox();
-    });
+//check if an option is selected from dropdown list
+function checkDropDownDiak2() {
+    var e = document.getElementById("dropdown-diak-szakjegy");
+    var res = e.options[e.selectedIndex].value;
+    if (res == "") {
+        return false;
+    }
+    return true;
+}
 
-    $("#form1").on('submit', function(e){
+function checkJegySzak() {
+    var value = document.getElementById("szak-jegy").value;
+    if (value == "") {
+        return false;
+    }
+    return true;
+}
 
-        var isValid = true;
+//check if the form could be sent
+function checkJegyadasSzak() {
+    if (!checkDropDownDiak2()) {
+        document.getElementById("error-drop4").style.display = "unset";
+        document.getElementById("error-drop4").innerHTML = "Válassz ki egy diákot!";
+        return false;
+    }
+    if (!checkJegySzak()) {
+        document.getElementById("szak-jegy-error").style.display = "unset";
+        document.getElementById("szak-jegy-error").innerHTML = "Add meg a jegyet!";
+        return false;
+    }
+    return true;
+}
 
-        $("#form1 input.full-name").each(function (){
-            if(!checkFullName($(this))) {
-                isValid = false;
-            }
-        });
+function changeEmailText() {
+    var input = document.getElementById("email-cim").value;
+    if (input == "") {
+        document.getElementById("error-email").style.display = "unset";
+        document.getElementById("error-email").innerHTML = "Írd be az email címed!";
+    } else {
+        document.getElementById("error-email").style.display = "none";
+    }
+}
 
-        $("#form1 input.one-name").each(function (){
-            if(!checkName($(this))) {
-                isValid = false;
-            }
-        });
+function checkEmailText() {
+    var value = document.getElementById("email-cim").value;
+    if (value == "") {
+        return false;
+    }
+    return true;
+}
 
-        $("#form1 input.theme-name").each(function (){
-            if(!checkTheme($(this))) {
-                isValid = false;
-            }
-        });
+function checkEmail() {
+    if (!checkEmailText()) {
+        document.getElementById("error-email").style.display = "unset";
+        document.getElementById("error-email").innerHTML = "Írd be az email címed!";
+        return false;
+    }
 
-        if(!check_matricol()){
-            isValid = false;
-        }
-
-        $("#form1 input[type=email]").each(function (){
-            if(!check_email($(this))) {
-                isValid = false;
-            }
-        });
-
-        if(!check_tel()){
-            isValid = false;
-        }
-    
-        if(!check_write_department()){
-            isValid = false;
-        }
-
-
-        $("#form1 .dropdown").each(function(){
-            if(!checkDropdown($(this))){
-                isValid = false;
-            }
-        });
-
-
-        if(!checkTeachers()){
-            isValid = false;
-            alert("Válassz ki két különböző tanárt az opcióknál!");
-        }
-
-        $("#form1 .radio-button-group").each(function(){
-            if(!checkRadioButton($(this))){
-                isValid = false;
-            }
-        });
-
-        if(!checkCheckBox()){
-            isValid = false;
-        }
-
-        if(isValid) {
-            var teacher1 = $("#dropdown3").val();
-            if(teacher1 === "Más vezető tanár"){
-                teacher1 = $("#teacher1").val();
-            }
-            var teacher2 = $("#dropdown4").val();
-            if(teacher2 === "Más vezető tanár"){
-                teacher2 = $("#teacher2").val();
-            }
-            if(!confirm("Időpont: " + $("input:radio[name='radiobutton1']:checked").val() + "\n1.opció:"+ "\nTéma: " + $(".theme-name:eq(0)").val() + "\nTanár: " + teacher1 + "\n2.opció:" + "\nTéma: "+ $(".theme-name:eq(1)").val() + "\nTanár: " + teacher2)){
-                isValid = false;
-            }
-        }
-
-        return isValid;
-    })
-
-    $("#kapcsolat-form textarea").change(function() {
-        checkEmptyInput($("#kapcsolat-form textarea"), "Írd meg a kérdésed vagy üzeneteted!");
-    });
-
-    $("#kapcsolat-form").on('submit', function(e){
-
-        var isValid = true;
-
-        $("#kapcsolat-form input[type=email]").each(function (){
-            if(!check_email($(this))) {
-                isValid = false;
-            }
-        });
-
-        if(!checkEmptyInput($("#kapcsolat-form textarea"), "Írd meg a kérdésed vagy üzeneteted!")) {
-            isValid = false;
-        }
-
-        if(isValid) {
-            alert("A választ a(z) " + $("#student-email").val() + " email címre hamarosan elküldjük!");
-        }
-
-        return isValid;
-    })
-
-});
+    alert("Sikeresen elküldtük a jelszavad az email címre!");
+    return true;
+}

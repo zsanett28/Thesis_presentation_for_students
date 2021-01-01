@@ -1,6 +1,6 @@
 /*Countdowner*/
 
-var dfebr = new Date("Febr 11, 2020 23:59:59").getTime();
+var dfebr = new Date("Febr 11, 2021 23:59:59").getTime();
 
 var f = setInterval(function () {
 
@@ -39,7 +39,7 @@ var f = setInterval(function () {
     }
 }, 1000);
 
-var djun = new Date("Jun 23, 2020 23:59:59").getTime();
+var djun = new Date("Jun 23, 2021 23:59:59").getTime();
 
 var j = setInterval(function () {
 
